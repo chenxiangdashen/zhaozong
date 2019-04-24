@@ -280,6 +280,16 @@
 
 
 
+                    <div class="item"><img src="image/AviationTitanjum.jpg">
+                        <div class="mask"><span class="b"></span>
+                            <h3><a link="AviationTitanjum.html">
+                                <strong>航空钛合金</strong>
+                                <em>软件及解决方案</em>
+                            </a></h3>
+                        </div>
+                    </div>
+
+
 
                     <div class="item"><img src="image/s57fde8df30823.jpg">
                         <div class="mask"><span class="b"></span>
@@ -298,14 +308,14 @@
                         </div>
                     </div>
 
-                    <div class="item"><img src="image/s57fddbd5c87e1.jpg">
-                        <div class="mask"><span class="b"></span>
-                            <h3><a link="LED.html">
-                                <strong>LED</strong>
-                                <em>LANEIGE</em>
-                            </a></h3>
-                        </div>
-                    </div>
+                    <!--<div class="item"><img src="image/s57fddbd5c87e1.jpg">-->
+                        <!--<div class="mask"><span class="b"></span>-->
+                            <!--<h3><a link="LED.html">-->
+                                <!--<strong>LED</strong>-->
+                                <!--<em>LANEIGE</em>-->
+                            <!--</a></h3>-->
+                        <!--</div>-->
+                    <!--</div>-->
 
                     <div class="item"><img src="image/s57fddcd762b67.jpg">
                         <div class="mask"><span class="b"></span>
@@ -363,14 +373,17 @@
                             </a></h3>
                         </div>
                     </div>
-                    <div class="item"><img src="image/s57fdf3bdf08ae.jpg">
+
+                    <div class="item"><img src="image/Clarins.jpg">
                         <div class="mask"><span class="b"></span>
-                            <h3><a link="bare3d.html">
-                                <strong>裸眼3D屏</strong>
-                                <em>单屏/拼接屏-设备方案及视频制作</em>
+                            <h3><a link="KATE.html">
+                                <strong>Clarins</strong>
+                                <em>Click to view details</em>
                             </a></h3>
                         </div>
                     </div>
+
+
                     <div class="item"><img src="image/s57fe0bb9de472.jpg">
                         <div class="mask"><span class="b"></span>
                             <h3><a link="closet.html">
@@ -379,6 +392,18 @@
                             </a></h3>
                         </div>
                     </div>
+
+
+                    <div class="item"><img src="image/s57fdf3bdf08ae.jpg">
+                        <div class="mask"><span class="b"></span>
+                            <h3><a link="bare3d.html">
+                                <strong>裸眼3D屏</strong>
+                                <em>单屏/拼接屏-设备方案及视频制作</em>
+                            </a></h3>
+                        </div>
+                    </div>
+
+
                     <div class="item"><img src="image/s57fe0d4cd1c4b.jpg">
                         <div class="mask"><span class="b"></span>
                             <h3><a link="LED.html">
@@ -396,15 +421,6 @@
                         </div>
                     </div>
 
-
-                    <div class="item"><img src="image/AviationTitanjum.jpg">
-                        <div class="mask"><span class="b"></span>
-                            <h3><a link="touch.html">
-                                <strong>航空钛合金</strong>
-                                <em>软件及解决方案</em>
-                            </a></h3>
-                        </div>
-                    </div>
 
 
                 </div>
@@ -728,26 +744,26 @@
             right: $(".case .list").outerWidth() - cx,
             bottom: $(".case .list").outerHeight() - cy
         }).show();
-//        $(".case_detail").transit({left: 0, top: 0, right: 0, bottom: 0}, 600, "cubic-bezier(0,1,0.6,1)", function () {
-//            var d = new Date();
-//            $(this).find(".content").load(t.attr("link") + "?" + d.getTime(), function () {
-//                $(".case_detail .loading").fadeOut(3000);
-//                if ($(window).width() > 1000) {
-//                    $(this).find(".pic").niceScroll({
-//                        cursorcolor: "#bbb",
-//                        cursorborder: "none",
-//                        cursorwidth: "6px",
-//                        scrollspeed: 80,
-//                        background: "#333",
-//                        cursoropacitymin: 1,
-//                        cursoropacitymax: 1,
-//                        enablekeyboard: false,
-//                        zindex: 1
-//                    });
-//                }
-//            });
-//
-//        });
+        $(".case_detail").transit({left: 0, top: 0, right: 0, bottom: 0}, 600, "cubic-bezier(0,1,0.6,1)", function () {
+            var d = new Date();
+            $(this).find(".content").load(t.attr("link") + "?" + d.getTime(), function () {
+                $(".case_detail .loading").fadeOut(300);
+                if ($(window).width() > 1000) {
+                    $(this).find(".pic").niceScroll({
+                        cursorcolor: "#bbb",
+                        cursorborder: "none",
+                        cursorwidth: "6px",
+                        scrollspeed: 80,
+                        background: "#333",
+                        cursoropacitymin: 1,
+                        cursoropacitymax: 1,
+                        enablekeyboard: false,
+                        zindex: 1
+                    });
+                }
+            });
+
+        });
         return false;
     });
 </script>
