@@ -258,7 +258,7 @@
             </div>
             <div class="list sd" style="display: none;">
                 <div class="close"></div>
-                <div class="inner" tabindex="5000" style="overflow: auto; outline: none;">
+                <div class="inner index" tabindex="5000" style="overflow: auto; outline: none;">
 
                     <div class="item"><img src="image/newStore_bg.jpg">
                         <div class="mask"><span class="b"></span>
@@ -720,7 +720,7 @@
         cx = event.clientX - $(this).offset().left;
         cy = event.clientY - $(this).offset().top;
     });
-    $(".case .list .item").click(function () {
+    $(".case .list .index .item").click(function () {
         var t = $(this).find("a");
         $(".case_detail").css({
             left: cx,
@@ -728,41 +728,41 @@
             right: $(".case .list").outerWidth() - cx,
             bottom: $(".case .list").outerHeight() - cy
         }).show();
-        $(".case_detail").transit({left: 0, top: 0, right: 0, bottom: 0}, 600, "cubic-bezier(0,1,0.6,1)", function () {
-            var d = new Date();
-            $(this).find(".content").load(t.attr("link") + "?" + d.getTime(), function () {
-                $(".case_detail .loading").fadeOut(300);
-                if ($(window).width() > 1000) {
-                    $(this).find(".pic").niceScroll({
-                        cursorcolor: "#bbb",
-                        cursorborder: "none",
-                        cursorwidth: "6px",
-                        scrollspeed: 80,
-                        background: "#333",
-                        cursoropacitymin: 1,
-                        cursoropacitymax: 1,
-                        enablekeyboard: false,
-                        zindex: 1
-                    });
-                }
-            });
-
-        });
+//        $(".case_detail").transit({left: 0, top: 0, right: 0, bottom: 0}, 600, "cubic-bezier(0,1,0.6,1)", function () {
+//            var d = new Date();
+//            $(this).find(".content").load(t.attr("link") + "?" + d.getTime(), function () {
+//                $(".case_detail .loading").fadeOut(3000);
+//                if ($(window).width() > 1000) {
+//                    $(this).find(".pic").niceScroll({
+//                        cursorcolor: "#bbb",
+//                        cursorborder: "none",
+//                        cursorwidth: "6px",
+//                        scrollspeed: 80,
+//                        background: "#333",
+//                        cursoropacitymin: 1,
+//                        cursoropacitymax: 1,
+//                        enablekeyboard: false,
+//                        zindex: 1
+//                    });
+//                }
+//            });
+//
+//        });
         return false;
     });
 </script>
 <div class="footer">
     <div class="left">
-        <!--<div class="d">-->
-            <!--<p>中国 · 上海<br>上海市新华路728号华联发展大厦218室</p>-->
-        <!--</div>-->
-        <!--<div class="d">-->
-            <!--&lt;!&ndash;<p>©2003-2016 fractal-technology.com<br>All Rights Reserved.<br>京ICP备 05007162<br>京公网安备 110105019435</p>&ndash;&gt;-->
-        <!--</div>-->
-        <!--<div class="d">-->
-            <!--<p>Tel：+862164666950-88<br>Hyper communication for a better life!-->
-            <!--</p>-->
-        <!--</div>-->
+        <div class="d">
+            <p>中国 · 上海<br>上海市新华路728号华联发展大厦218室</p>
+        </div>
+        <div class="d">
+            <!--<p>©2003-2016 fractal-technology.com<br>All Rights Reserved.<br>京ICP备 05007162<br>京公网安备 110105019435</p>-->
+        </div>
+        <div class="d">
+            <p>Tel：+862164666950-88<br>Hyper communication for a better life!
+            </p>
+        </div>
     </div>
     <!-- <div class="left2">
         <div class="d">

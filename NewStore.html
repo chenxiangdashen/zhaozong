@@ -6,7 +6,7 @@
 <body>
 <div class="case">
     <div class="list sd show" style="display:block">
-        <div class="inner" style="overflow: auto;outline: none;">
+        <div class="inner newStore" style="overflow: auto;outline: none;">
 
 
             <div class="item"><img src="image/s57fdde6b49bc1.jpg">
@@ -53,14 +53,15 @@
 </body>
 
 <script>
-    $(".case .list .item").click(function () {
+    $(".case .list .newStore .item").click(function () {
         var t = $(this).find("a");
-        $(".case_detail").css({
-            left: cx,
-            top: cy,
-            right: $(".case .list").outerWidth() - cx,
-            bottom: $(".case .list").outerHeight() - cy
-        }).show();
+
+//        $(".case_detail").css({
+//            left: cx,
+//            top: cy,
+//            right: $(".case .list").outerWidth() - cx,
+//            bottom: $(".case .list").outerHeight() - cy
+//        }).show();
 
         console.log(t.attr("link") )
         $(".case_detail").transit({left: 0, top: 0, right: 0, bottom: 0}, 600, "cubic-bezier(0,1,0.6,1)", function () {
