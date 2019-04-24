@@ -1,11 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
 /*
-color:red !important;/* Firefox、IE7支持 
-_color:red;  IE6支持 
-*color:red;  IE6、IE7支持 
+color:red !important;/* Firefox、IE7支持
+_color:red;  IE6支持
+*color:red;  IE6、IE7支持
 *+color:red; IE7支持/
-color:red\9; IE6、IE7、IE8支持 
+color:red\9; IE6、IE7、IE8支持
 color:red\0; IE8支持
 @media screen and(-webkit-min-device-pixel-ratio:0){} chrome
 filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#99000000', EndColorStr='#99000000');

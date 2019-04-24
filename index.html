@@ -23,30 +23,30 @@
     <script src="./js/jquery.mousewheel.js"></script>
     <style>
 
-        ::-webkit-scrollbar-thumb {
-            background-color: #D0C9C9;
-            height: 50px;
-            outline-offset: -2px;
-            outline: 2px solid #D0C9C9;
-            -webkit-border-radius: 0px;
-            border: 2px solid #D0C9C9;
-        }
+        /*::-webkit-scrollbar-thumb {*/
+            /*background-color: #D0C9C9;*/
+            /*height: 50px;*/
+            /*outline-offset: -2px;*/
+            /*outline: 2px solid #D0C9C9;*/
+            /*-webkit-border-radius: 0px;*/
+            /*border: 2px solid #D0C9C9;*/
+        /*}*/
 
-        ::-webkit-scrollbar-thumb:hover {
-            background-color: #D0C9C9;
-            height: 50px;
-            -webkit-border-radius: 0px;
-        }
+        /*::-webkit-scrollbar-thumb:hover {*/
+            /*background-color: #D0C9C9;*/
+            /*height: 50px;*/
+            /*-webkit-border-radius: 0px;*/
+        /*}*/
 
-        ::-webkit-scrollbar {
-            width: 14px;
-            height: 14px;
-        }
+        /*::-webkit-scrollbar {*/
+            /*width: 5px;*/
+            /*height: 5px;*/
+        /*}*/
 
-        ::-webkit-scrollbar-track-piece {
-            background-color: #514f5b;
-            -webkit-border-radius: 0;
-        }
+        /*::-webkit-scrollbar-track-piece {*/
+            /*background-color: #514f5b;*/
+            /*-webkit-border-radius: 0;*/
+        /*}*/
 
     </style>
 </head>
@@ -271,7 +271,7 @@
 
                     <div class="item"><img src="image/gdzl_bg.jpg">
                         <div class="mask"><span class="b"></span>
-                            <h3><a link="Sulwhasoo.html">
+                            <h3><a link="gdzl.html">
                                 <strong>光电租赁</strong>
                                 <em>Phonelectric lease</em>
                             </a></h3>
@@ -624,18 +624,18 @@
 
                 setTimeout(function () {
                     $(".case .list").fadeIn(1000, function () {
-                        if (!$(".case .list").hasClass("sd")) {
+                        if ($(".case .list").hasClass("sd")) {
                             if ($(window).width() > 1000) {
                                 $(this).find(".inner").niceScroll({
-                                    cursorcolor: "#ccc",
-                                    cursorborder: "none",
-                                    cursorwidth: "6px",
-                                    scrollspeed: 80,
-                                    background: "#555",
-                                    cursoropacitymin: 0.2,
-                                    cursoropacitymax: 1,
-                                    enablekeyboard: false,
-                                    zindex: 1
+                                    cursorcolor:"#ccc",
+                                    cursorborder:"none",
+                                    cursorwidth:"6px",
+                                    scrollspeed:80,
+                                    background:"#555",
+                                    cursoropacitymin:0.2,
+                                    cursoropacitymax:1,
+                                    enablekeyboard:false,
+                                    zindex:1
                                 });
                             }
                             $(".case .list").addClass("sd");
