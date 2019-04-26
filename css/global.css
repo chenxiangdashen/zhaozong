@@ -1522,6 +1522,19 @@ html, body {
     overflow: hidden;
 }
 
+.case_menu .content {
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.case_menu .close {
+    z-index:10;
+}
+
+
+
 .case_detail .content .pic {
     position: absolute;
     left: 0;

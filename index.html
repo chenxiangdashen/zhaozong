@@ -262,7 +262,7 @@
 
                     <div class="item"><img src="image/newStore_bg.jpg">
                         <div class="mask"><span class="b"></span>
-                            <h3><a link="NewStore.html">
+                            <h3><a link="NewStore.html" type="menu" >
                                 <strong>新店店装</strong>
                                 <em>New Store</em>
                             </a></h3>
@@ -271,7 +271,7 @@
 
                     <div class="item"><img src="image/gdzl_bg.jpg">
                         <div class="mask"><span class="b"></span>
-                            <h3><a link="gdzl.html">
+                            <h3><a link="gdzl.html" type="menu">
                                 <strong>光电租赁</strong>
                                 <em>Phonelectric lease</em>
                             </a></h3>
@@ -433,7 +433,30 @@
                     <div style="position: relative; top: 0px; height: 6px; background-color: rgb(204, 204, 204); border: none; background-clip: padding-box; border-radius: 5px; width: 1660px;"></div>
                 </div>
             </div>
-            <div class="case_detail" style="display: none; left: 0px; top: 0px; right: 0px; bottom: 0px;">
+
+            <div class="case_detail js_case_detail" style="display: none; left: 0px; top: 0px; right: 0px; bottom: 0px;">
+                <div class="close"></div>
+                <div class="content"></div>
+                <div class="loading" style="display: block;">
+                    <div class="spinner">
+                        <div class="spinner-container container1">
+                            <div class="circle1"></div>
+                            <div class="circle2"></div>
+                            <div class="circle3"></div>
+                            <div class="circle4"></div>
+                        </div>
+                        <div class="spinner-container container2">
+                            <div class="circle1"></div>
+                            <div class="circle2"></div>
+                            <div class="circle3"></div>
+                            <div class="circle4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="case_detail case_menu js_case_menu" style="display: none; left: 0px; top: 0px; right: 0px; bottom: 0px;">
                 <div class="close"></div>
                 <div class="content"></div>
                 <div class="loading" style="display: block;">
@@ -635,7 +658,7 @@
                                     cursoropacitymin:0.2,
                                     cursoropacitymax:1,
                                     enablekeyboard:false,
-                                    zindex:1
+                                    zindex:0
                                 });
                             }
                             $(".case .list").addClass("sd");
@@ -723,10 +746,17 @@
         }, false);
     }
 
-    $(".case_detail .close").click(function () {
-        $(".case_detail").fadeOut(400, function () {
-            $(".case_detail").find(".content").html("");
-            $(".case_detail .loading").show();
+    $(".js_case_menu .close").click(function () {
+        $(".js_case_menu").fadeOut(400, function () {
+            $(".js_case_menu").find(".content").html("");
+//            $(".js_case_menu .loading").show();
+        });
+    });
+
+    $(".js_case_detail .close").click(function () {
+        $(".js_case_detail").fadeOut(400, function () {
+            $(".js_case_detail").find(".content").html("");
+//            $(".js_case_detail .loading").show();
         });
     });
 
@@ -736,18 +766,23 @@
         cx = event.clientX - $(this).offset().left;
         cy = event.clientY - $(this).offset().top;
     });
+
+
     $(".case .list .index .item").click(function () {
         var t = $(this).find("a");
-        $(".case_detail").css({
+
+        var _detail = t.attr('type')==='menu' ? $(".js_case_menu") : $(".js_case_detail");
+
+        _detail.css({
             left: cx,
             top: cy,
             right: $(".case .list").outerWidth() - cx,
             bottom: $(".case .list").outerHeight() - cy
         }).show();
-        $(".case_detail").transit({left: 0, top: 0, right: 0, bottom: 0}, 600, "cubic-bezier(0,1,0.6,1)", function () {
+        _detail.transit({left: 0, top: 0, right: 0, bottom: 0}, 600, "cubic-bezier(0,1,0.6,1)", function () {
             var d = new Date();
             $(this).find(".content").load(t.attr("link") + "?" + d.getTime(), function () {
-                $(".case_detail .loading").fadeOut(300);
+                _detail.find('.loading').fadeOut(300);
                 if ($(window).width() > 1000) {
                     $(this).find(".pic").niceScroll({
                         cursorcolor: "#bbb",
@@ -810,6 +845,18 @@
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
     })();
+</script>
+
+<!--model代码-->
+<script>
+
+   function openModel(){
+
+
+
+
+       console.log('aaaaakkkkkßßßßß')
+   }
 </script>
 
 
