@@ -180,7 +180,7 @@ html, body {
 
 .header .r {
     float: right;
-    width: 210px;
+    width: 289px;
     height: 100%;
     margin-right: -50px;
     opacity: 0;
@@ -1530,10 +1530,8 @@ html, body {
 }
 
 .case_menu .close {
-    z-index:10;
+    z-index: 10;
 }
-
-
 
 .case_detail .content .pic {
     position: absolute;
@@ -2700,3 +2698,95 @@ html, body {
     background: #fff;
 }
 
+.music-box {
+    overflow: hidden;
+    margin: 100px auto;
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    background: #0a0a0a;
+    border: 5px solid #000;
+}
+
+.music-list {
+    position: absolute;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 10px;
+    border:1px solid #fff;
+}
+
+.music-list li {
+    overflow: hidden;
+    margin: 0 10px 10px;
+    width: calc(50% - 20px);
+    float: left;
+}
+
+.music-list .music-name {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100%;
+    height: 16px;
+}
+
+.music-list .music-name p {
+    overflow: hidden;
+    /* display: table; */
+    margin: 0 auto;
+    width: 100%;
+    height: 22px;
+    /* line-height: 22px; */
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+}
+
+.video-img-mask {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+}
+
+
+.music-name p.on {
+    -webkit-animation: tada 1.5s .2s ease both infinite;
+    -moz-animation: tada 1.5s .2s ease both infinite;
+}
+
+@-webkit-keyframes tada {
+    0% {
+        -webkit-transform: scale(1)
+    }
+    10%, 20% {
+        -webkit-transform: scale(0.9) rotate(-3deg)
+    }
+    30%, 50%, 70%, 90% {
+        -webkit-transform: scale(1.1) rotate(3deg)
+    }
+    40%, 60%, 80% {
+        -webkit-transform: scale(1.1) rotate(-3deg)
+    }
+    100% {
+        -webkit-transform: scale(1) rotate(0)
+    }
+}
+
+@-moz-keyframes tada {
+    0% {
+        -moz-transform: scale(1)
+    }
+    10%, 20% {
+        -moz-transform: scale(0.9) rotate(-3deg)
+    }
+    30%, 50%, 70%, 90% {
+        -moz-transform: scale(1.1) rotate(3deg)
+    }
+    40%, 60%, 80% {
+        -moz-transform: scale(1.1) rotate(-3deg)
+    }
+    100% {
+        -moz-transform: scale(1) rotate(0)
+    }
+}
