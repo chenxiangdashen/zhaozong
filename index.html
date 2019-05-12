@@ -72,7 +72,7 @@
 
             <div class="video-img-mask video-img-paly">
                 <img src="./images/play_icon.png" class="audio-iocn" width="50" height="50" alt="">
-                <audio class="audio" src="./audio/bgm4.mp3"  autoplay="autoplay" preload="auto" loop="loop"></audio>
+                <audio id="audioBgm" class="audio" src="./audio/bgm4.mp3"  autoplay="autoplay" preload="auto" loop="loop"></audio>
 
             </div>
             <div class="music-name"><p>Live Song!</p></div>
@@ -523,6 +523,8 @@
         winload();
 
         $('.music-name').webTicker({speed:20,direction: 'right'})
+        var music = document.getElementById("audioBgm");//获取ID  
+        var flagPlay = true;
 
         //点击切换播放
         $(".video-img-mask").click(function () {
@@ -534,18 +536,33 @@
                 $(this).parents('li').find('.music-name p').addClass("on");
                 $(this).find('.audio-iocn').attr('src','./images/play_icon.png');  //播放图片
                 $(this).find('.audio').get(0).play();  //开始播
+                flagPlay = true;
                 $('.music-name').webTicker({speed:20,direction: 'right'})
             }else{ //如果当前暂停
                 $(this).removeClass("video-img-paly");
                 $('.music-name p').removeClass("on");
                 $(this).find('.audio-iocn').attr('src','./images/audio_icon.png'); //播放图片
                 $(this).find('.audio').get(0).pause();  //开始播放
+                flagPlay = false;
                 $('.music-name').webTicker('stop')
             }
         }).easyAudioEffects({
             mp3 : "./audio/chime.mp3",
             eventType : 'click'
         });
+
+
+
+        function toggleSound() {
+            if (music.paused && flagPlay) { //判读是否播放  
+                music.paused=false;
+                music.play(); //没有就播放 
+            }
+        }
+
+        setInterval(toggleSound,100);
+
+
 //        $('#trigger-2-click').click(function(){
 //            console.log('1111')
 //        }).easyAudioEffects({
