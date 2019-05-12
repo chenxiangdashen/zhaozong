@@ -72,7 +72,7 @@
 
             <div class="video-img-mask video-img-paly">
                 <img src="./images/play_icon.png" class="audio-iocn" width="50" height="50" alt="">
-                <audio class="audio" src="./audio/bgm4.mp3" autoplay preload="auto" loop="loop"></audio>
+                <audio class="audio" src="./audio/bgm4.mp3"  autoplay="autoplay" preload="auto" loop="loop"></audio>
 
             </div>
             <div class="music-name"><p>Live Song!</p></div>
@@ -522,6 +522,7 @@
     $(function () {
         winload();
 
+        $('.music-name').webTicker({speed:20,direction: 'right'})
 
         //点击切换播放
         $(".video-img-mask").click(function () {
