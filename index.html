@@ -70,9 +70,9 @@
 
         <div class="music-list  ">
 
-            <div class="video-img-mask">
-                <img src="images/audio_icon.png" class="audio-iocn" width="50" height="50" alt="">
-                <audio class="audio" src="./audio/bgm4.mp3" preload="auto" loop="loop"></audio>
+            <div class="video-img-mask video-img-paly">
+                <img src="./images/play_icon.png" class="audio-iocn" width="50" height="50" alt="">
+                <audio class="audio" src="./audio/bgm4.mp3" autoplay preload="auto" loop="loop"></audio>
 
             </div>
             <div class="music-name"><p>Live Song!</p></div>
@@ -856,6 +856,9 @@
 
         });
         return false;
+    }).easyAudioEffects({
+        mp3 : "./audio/chime.mp3",
+        eventType : 'click'
     });
 </script>
 <div class="footer">
