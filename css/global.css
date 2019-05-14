@@ -522,7 +522,7 @@ html, body {
     background-position: -122px top;
 }
 
-.footer .right .share a.a4:hover i {
+.footer .right .share a.a4.active i {
     background-position: -122px bottom;
 }
 

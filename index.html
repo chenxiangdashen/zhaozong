@@ -68,15 +68,17 @@
             <div class="link">400 920 6205 全国维护电话</div>
         </div>
 
-        <div class="music-list  ">
+        <audio id="audioBgm" class="audio" src="./audio/bgm4.mp3" preload="auto" loop="loop"></audio>
 
-            <div class="video-img-mask video-img-paly">
-                <img src="./images/play_icon.png" class="audio-iocn" width="50" height="50" alt="">
-                <audio id="audioBgm" class="audio" src="./audio/bgm4.mp3"  autoplay="autoplay" preload="auto" loop="loop"></audio>
+        <!--<div class="music-list">-->
 
-            </div>
-            <div class="music-name"><p>Live Song!</p></div>
-        </div>
+            <!--<div class="video-img-mask">-->
+                <!--<img src="images/audio_icon.png" class="audio-iocn" width="50" height="50" alt="">-->
+                <!--<audio class="audio" src="./audio/bgm4.mp3" preload="auto" loop="loop"></audio>-->
+
+            <!--</div>-->
+            <!--<div class="music-name"><p>Live Song!</p></div>-->
+        <!--</div>-->
 
     </div>
 </div>
@@ -527,24 +529,17 @@
         var flagPlay = true;
 
         //点击切换播放
-        $(".video-img-mask").click(function () {
-            if(!$(this).hasClass("video-img-paly")){//如果当前播放
-                $('.video-img-mask').removeClass("video-img-paly");
-                $('.audio-iocn').attr('src','./images/audio_icon.png'); //播放图片
-                $(this).addClass("video-img-paly");
-                $('.music-name p').removeClass("on");
-                $(this).parents('li').find('.music-name p').addClass("on");
-                $(this).find('.audio-iocn').attr('src','./images/play_icon.png');  //播放图片
-                $(this).find('.audio').get(0).play();  //开始播
+        $(".share .a4").click(function () {
+            if($(this).hasClass("active")){//如果当前播放
+                $(this).removeClass("active");
+
+                music.play();  //开始播
                 flagPlay = true;
-                $('.music-name').webTicker({speed:20,direction: 'right'})
+
             }else{ //如果当前暂停
-                $(this).removeClass("video-img-paly");
-                $('.music-name p').removeClass("on");
-                $(this).find('.audio-iocn').attr('src','./images/audio_icon.png'); //播放图片
-                $(this).find('.audio').get(0).pause();  //开始播放
+                $(this).addClass("active");
+                music.pause();  //开始播放
                 flagPlay = false;
-                $('.music-name').webTicker('stop')
             }
         }).easyAudioEffects({
             mp3 : "./audio/chime.mp3",
@@ -927,13 +922,7 @@
 <!--model代码-->
 <script>
 
-   function openModel(){
 
-
-
-
-       console.log('aaaaakkkkkßßßßß')
-   }
 </script>
 
 
