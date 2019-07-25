@@ -181,7 +181,6 @@ html, body {
 .header .r {
     float: right;
     width: 289px;
-    height: 100%;
     margin-right: -50px;
     opacity: 0;
     position: relative;
