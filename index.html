@@ -31,28 +31,28 @@
     <style>
 
         /*::-webkit-scrollbar-thumb {*/
-            /*background-color: #D0C9C9;*/
-            /*height: 50px;*/
-            /*outline-offset: -2px;*/
-            /*outline: 2px solid #D0C9C9;*/
-            /*-webkit-border-radius: 0px;*/
-            /*border: 2px solid #D0C9C9;*/
+        /*background-color: #D0C9C9;*/
+        /*height: 50px;*/
+        /*outline-offset: -2px;*/
+        /*outline: 2px solid #D0C9C9;*/
+        /*-webkit-border-radius: 0px;*/
+        /*border: 2px solid #D0C9C9;*/
         /*}*/
 
         /*::-webkit-scrollbar-thumb:hover {*/
-            /*background-color: #D0C9C9;*/
-            /*height: 50px;*/
-            /*-webkit-border-radius: 0px;*/
+        /*background-color: #D0C9C9;*/
+        /*height: 50px;*/
+        /*-webkit-border-radius: 0px;*/
         /*}*/
 
         /*::-webkit-scrollbar {*/
-            /*width: 5px;*/
-            /*height: 5px;*/
+        /*width: 5px;*/
+        /*height: 5px;*/
         /*}*/
 
         /*::-webkit-scrollbar-track-piece {*/
-            /*background-color: #514f5b;*/
-            /*-webkit-border-radius: 0;*/
+        /*background-color: #514f5b;*/
+        /*-webkit-border-radius: 0;*/
         /*}*/
 
     </style>
@@ -72,12 +72,12 @@
 
         <!--<div class="music-list">-->
 
-            <!--<div class="video-img-mask">-->
-                <!--<img src="images/audio_icon.png" class="audio-iocn" width="50" height="50" alt="">-->
-                <!--<audio class="audio" src="./audio/bgm4.mp3" preload="auto" loop="loop"></audio>-->
+        <!--<div class="video-img-mask">-->
+        <!--<img src="images/audio_icon.png" class="audio-iocn" width="50" height="50" alt="">-->
+        <!--<audio class="audio" src="./audio/bgm4.mp3" preload="auto" loop="loop"></audio>-->
 
-            <!--</div>-->
-            <!--<div class="music-name"><p>Live Song!</p></div>-->
+        <!--</div>-->
+        <!--<div class="music-name"><p>Live Song!</p></div>-->
         <!--</div>-->
 
     </div>
@@ -90,9 +90,27 @@
 <script src="./js/vivus.min.js"></script>
 
 <div class="banner">
-    <div class="frame" style="transform: scale(1.05, 1.05) translate(-6px, -13px);">
-        <div class="child" style="background-image:url(image/banner.jpg);"></div>
+    <!--    <div class="frame" style="transform: scale(1.05, 1.05) translate(-6px, -13px);">-->
+    <!--        <div class="child" style="background-image:url(image/banner.jpg);"></div>-->
+    <!--    </div>-->
+    <div class="frame">
+        <video class="vbg" id="vbg1" preload="auto" loop width="100%" height="100%"
+               poster1="./image/New/video1.jpg" webkit-playsinline muted>
+            <source src="./image/New/bg_d.mp4" type="video/mp4"></source>
+            <source src="./image/New/bg_d.webm" type="video/webm"></source>
+        </video>
+        <video class="vbg" id="vbg2" preload="metadata" loop width="100%" height="100%"
+               poster1="/Public/static/themes/designs/themes/image/video2.jpg" webkit-playsinline muted>
+            <source src="./image/New/bg_n.mp4" type="video/mp4"></source>
+            <source src="./image/New/bg_n.webm" type="video/webm"></source>
+        </video>
+
+        <div class="vbgm" style="background:url(image/New/video1.jpg) center center no-repeat;background-size:cover;"></div>
+        <div class="vbgm" style="background:url(image/New/video2.jpg) center center no-repeat;background-size:cover;"></div>
+
     </div>
+
+
 </div>
 <div class="caseshadow" style="display: none;"></div>
 <div class="body">
@@ -100,790 +118,250 @@
     <a href="#" class="a_r"></a>
     <div class="main"><span class="bdr b1"></span><span class="bdr b2"></span><span class="bdr b3"></span><span
             class="bdr b4"></span>
-        <div class="case">
-            <div class="svg" style="width: 1313.48px;">
-                <div class="polygon" style="display: block;">
-                    <svg class="p" xmlns="http://www.w3.org/2000/svg" version="1.1" width="265" height="230"
-                         viewBox="0 0 265 230"
-                         style="left: 0px; top: 0px; transform: translate(0px, 0px) rotateX(0deg) rotateY(0deg) scale(1, 1); opacity: 1; width: 262.696px; height: 228px;">
-                        <defs>
-                            <pattern id="bgimg1" patternUnits="userSpaceOnUse" width="100%" height="100%">
-                                <image xlink:href="image/pic1.jpg" x="0" y="0" width="100%"
-                                       height="100%"></image>
-                            </pattern>
-                        </defs>
-                        <polygon class="pic" points="132,0 0,230 265,230"
-                                 style="fill:url(#bgimg1);opacity:0.2;"></polygon>
-                        <polygon class="pic2" points="132,0 0,230 265,230"
-                                 style="fill: url(&quot;#bgimg1&quot;); opacity: 0.2; transform: translate(0%, 0%) scale(1, 1);"></polygon>
-                        <polygon class="bdr" points="132,0 0,230 265,230" style="animation-delay: 6.1s;"></polygon>
-                    </svg>
-                    <svg class="p" xmlns="http://www.w3.org/2000/svg" version="1.1" width="265" height="230"
-                         viewBox="0 0 265 230"
-                         style="left: 20%; top: 33.33%; transform: translate(0px, 0px) rotateX(0deg) rotateY(0deg) scale(1, 1); opacity: 1; width: 262.696px; height: 228px;">
-                        <defs>
-                            <pattern id="bgimg2" patternUnits="userSpaceOnUse" width="100%" height="100%">
-                                <image xlink:href="image/pic2.jpg" x="0" y="0" width="100%"
-                                       height="100%"></image>
-                            </pattern>
-                        </defs>
-                        <polygon class="pic" points="0,0 265,0 132,230"
-                                 style="fill:url(#bgimg2);opacity:0.2;"></polygon>
-                        <polygon class="pic2" points="0,0 265,0 132,230"
-                                 style="fill: url(&quot;#bgimg2&quot;); opacity: 0.2; transform: translate(0%, 0%) scale(1, 1);"></polygon>
-                        <polygon class="bdr" points="0,0 265,0 132,230" style="animation-delay: 1.5s;"></polygon>
-                    </svg>
-                    <svg class="p" xmlns="http://www.w3.org/2000/svg" version="1.1" width="265" height="230"
-                         viewBox="0 0 265 230"
-                         style="left: 20%; top: 66.66%; transform: translate(0px, 0px) rotateX(0deg) rotateY(0deg) scale(1, 1); opacity: 1; width: 262.696px; height: 228px;">
-                        <defs>
-                            <pattern id="bgimg3" patternUnits="userSpaceOnUse" width="100%" height="100%">
-                                <image xlink:href="image/pic3.jpg" x="0" y="0" width="100%"
-                                       height="100%"></image>
-                            </pattern>
-                        </defs>
-                        <polygon class="pic" points="132,0 0,229 265,229" style="fill:url(#bgimg3);"></polygon>
-                        <polygon class="pic2" points="132,0 0,229 265,229"
-                                 style="fill: url(&quot;#bgimg3&quot;); transform: translate(0%, 0%) scale(1, 1);"></polygon>
-                        <polygon class="bdr" points="132,0 0,230 265,230" style="animation-delay: 4.6s;"></polygon>
-                    </svg>
-                    <svg class="p" xmlns="http://www.w3.org/2000/svg" version="1.1" width="265" height="230"
-                         viewBox="0 0 265 230"
-                         style="left: 30%; top: 33.33%; transform: scale(1, 1) translate(0px, 0px) rotateX(0deg) rotateY(0deg); opacity: 1; width: 262.696px; height: 228px;">
-                        <defs>
-                            <pattern id="bgimg4" patternUnits="userSpaceOnUse" width="100%" height="100%">
-                                <image xlink:href="image/pic4.jpg" x="0" y="0" width="100%"
-                                       height="100%"></image>
-                            </pattern>
-                        </defs>
-                        <polygon class="pic" points="132,0 0,230 265,230" style="fill:url(#bgimg4);"></polygon>
-                        <polygon class="pic2" points="132,0 0,230 265,230"
-                                 style="fill: url(&quot;#bgimg4&quot;); transform: translate(0%, 0%) scale(1, 1);"></polygon>
-                        <polygon class="bdr" points="132,0 0,230 265,230" style="animation-delay: 3.9s;"></polygon>
-                    </svg>
-                    <svg class="p" xmlns="http://www.w3.org/2000/svg" version="1.1" width="265" height="230"
-                         viewBox="0 0 265 230"
-                         style="left: 40%; top: 0%; transform: scale(1, 1) translate(0px, 0px) rotateX(0deg) rotateY(0deg); opacity: 1; width: 262.696px; height: 228px;">
-                        <defs>
-                            <pattern id="bgimg5" patternUnits="userSpaceOnUse" width="100%" height="100%">
-                                <image xlink:href="image/pic5.jpg" x="0" y="0" width="100%"
-                                       height="100%"></image>
-                            </pattern>
-                        </defs>
-                        <polygon class="pic" points="132,0 0,230 265,230" style="fill:url(#bgimg5);"></polygon>
-                        <polygon class="pic2" points="132,0 0,229 265,229"
-                                 style="fill: url(&quot;#bgimg5&quot;); transform: translate(0%, 0%) scale(1, 1);"></polygon>
-                        <polygon class="bdr" points="132,0 0,230 265,230" style="animation-delay: 4.7s;"></polygon>
-                    </svg>
-                    <svg class="p" xmlns="http://www.w3.org/2000/svg" version="1.1" width="265" height="230"
-                         viewBox="0 0 265 230"
-                         style="left: 40%; top: 66.66%; transform: scale(1, 1) translate(0px, 0px) rotateX(0deg) rotateY(0deg); opacity: 1; width: 262.696px; height: 228px;">
-                        <defs>
-                            <pattern id="bgimg6" patternUnits="userSpaceOnUse" width="100%" height="100%">
-                                <image xlink:href="image/pic6.jpg" x="0" y="0" width="100%"
-                                       height="100%"></image>
-                            </pattern>
-                        </defs>
-                        <polygon class="pic" points="132,0 0,229 265,229" style="fill:url(#bgimg6);"></polygon>
-                        <polygon class="pic2" points="132,0 0,229 265,229"
-                                 style="fill: url(&quot;#bgimg6&quot;); transform: translate(0%, 0%) scale(1, 1);"></polygon>
-                        <polygon class="bdr" points="132,0 0,230 265,230" style="animation-delay: 4.1s;"></polygon>
-                    </svg>
-                    <svg class="p" xmlns="http://www.w3.org/2000/svg" version="1.1" width="265" height="230"
-                         viewBox="0 0 265 230"
-                         style="left: 50%; top: 33.33%; transform: scale(1, 1) translate(0px, 0px) rotateX(0deg) rotateY(0deg); opacity: 1; width: 262.696px; height: 228px;">
-                        <defs>
-                            <pattern id="bgimg7" patternUnits="userSpaceOnUse" width="100%" height="100%">
-                                <image xlink:href="image/pic7.jpg" x="0" y="0" width="100%"
-                                       height="100%"></image>
-                            </pattern>
-                        </defs>
-                        <polygon class="pic" points="132,0 0,230 265,230" style="fill:url(#bgimg7);"></polygon>
-                        <polygon class="pic2" points="132,0 0,230 265,230"
-                                 style="fill: url(&quot;#bgimg7&quot;); transform: translate(0%, 0%) scale(1, 1);"></polygon>
-                        <polygon class="bdr" points="132,0 0,230 265,230" style="animation-delay: 3.3s;"></polygon>
-                    </svg>
-                    <svg class="p" xmlns="http://www.w3.org/2000/svg" version="1.1" width="265" height="230"
-                         viewBox="0 0 265 230"
-                         style="left: 60%; top: 66.66%; transform: translate(0px, 0px) rotateX(0deg) rotateY(0deg) scale(1, 1); opacity: 1; width: 262.696px; height: 228px;">
-                        <defs>
-                            <pattern id="bgimg8" patternUnits="userSpaceOnUse" width="100%" height="100%">
-                                <image xlink:href="image/pic8.jpg" x="0" y="0" width="100%"
-                                       height="100%"></image>
-                            </pattern>
-                        </defs>
-                        <polygon class="pic" points="132,0 0,229 265,229" style="fill:url(#bgimg8);"></polygon>
-                        <polygon class="pic2" points="132,0 0,229 265,229"
-                                 style="fill: url(&quot;#bgimg8&quot;); transform: translate(0%, 0%) scale(1, 1);"></polygon>
-                        <polygon class="bdr" points="132,0 0,230 265,230" style="animation-delay: 5.7s;"></polygon>
-                    </svg>
-                    <svg class="p" xmlns="http://www.w3.org/2000/svg" version="1.1" width="265" height="230"
-                         viewBox="0 0 265 230"
-                         style="left: 80%; top: 33.33%; transform: translate(0px, 0px) rotateX(0deg) rotateY(0deg) scale(1, 1); opacity: 1; width: 262.696px; height: 228px;">
-                        <defs>
-                            <pattern id="bgimg9" patternUnits="userSpaceOnUse" width="100%" height="100%">
-                                <image xlink:href="image/pic9.jpg" x="0" y="0" width="100%"
-                                       height="100%"></image>
-                            </pattern>
-                        </defs>
-                        <polygon class="pic" points="0,0 265,0 132,230"
-                                 style="fill:url(#bgimg9);opacity:0.2;"></polygon>
-                        <polygon class="pic2" points="0,0 265,0 132,230"
-                                 style="fill: url(&quot;#bgimg9&quot;); opacity: 0.2; transform: translate(0%, 0%) scale(1, 1);"></polygon>
-                        <polygon class="bdr" points="0,0 265,0 132,230" style="animation-delay: 2.7s;"></polygon>
-                    </svg>
-                </div>
-                <svg id="line" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"
-                     viewBox="0 0 1325 690"
-                     style="position: absolute; left: 0px; top: 0px; background: rgba(255, 255, 255, 0); display: block;">
-                    <path d="M 795 230 L530 690 L133 0 L0 230 L1325 230 L1060 690"
-                          style="stroke-dasharray: 3449, 3451; stroke-dashoffset: 0;"></path>
-                    <path d="M927 460 L132 460 L264 690 L662 0 L1060 690"
-                          style="stroke-dasharray: 2654, 2656; stroke-dashoffset: 0;"></path>
-                    <path d="M530 230 L795 690 L1060 230 L1192 460"
-                          style="stroke-dasharray: 1327, 1329; stroke-dashoffset: 0;"></path>
-                </svg>
-            </div>
-            <div class="title" style="transform: translate(12px, 15px) scale(1, 1); opacity: 1;">
-                <img src="./image/LOGO(1).png" width="280" height="110" alt="">
 
-                <!--<h1 class="showtit act"><i style="transition-delay:0.6s;-webkit-transition-delay:0.2s">H</i><i-->
-                        <!--style="transition-delay:0.3s;-webkit-transition-delay:0.3s">y</i><i-->
-                        <!--style="transition-delay:0.2s;-webkit-transition-delay:0.4s">-</i><i-->
-                        <!--style="transition-delay:0.5s;-webkit-transition-delay:0.5s">C</i><i-->
-                        <!--style="transition-delay:0.5s;-webkit-transition-delay:0.5s">o</i><i-->
-                        <!--style="transition-delay:0.1s;-webkit-transition-delay:0.7s">m</i></h1>-->
-                <!--<p class="showtit act"><i style="transition-delay:0.3s;-webkit-transition-delay:0.2s">P</i><i-->
-                        <!--style="transition-delay:0.5s;-webkit-transition-delay:0.4s">H</i><i-->
-                        <!--style="transition-delay:0.6s;-webkit-transition-delay:0.6s">O</i><i-->
-                        <!--style="transition-delay:0.3s;-webkit-transition-delay:0.3s">T</i><i-->
-                        <!--style="transition-delay:0.5s;-webkit-transition-delay:0.5s">O</i><i-->
-                        <!--style="transition-delay:0.2s;-webkit-transition-delay:0.1s">E</i><i-->
-                        <!--style="transition-delay:0.6s;-webkit-transition-delay:0.1s">L</i><i-->
-                        <!--style="transition-delay:0.6s;-webkit-transition-delay:0.5s">E</i><i-->
-                        <!--style="transition-delay:0.1s;-webkit-transition-delay:0.2s">C</i><i-->
-                        <!--style="transition-delay:0.7s;-webkit-transition-delay:0.7s">T</i><i-->
-                        <!--style="transition-delay:0.2s;-webkit-transition-delay:0.6s">R</i><i-->
-                        <!--style="transition-delay:0.2s;-webkit-transition-delay:0.6s">I</i><i-->
-                        <!--style="transition-delay:0.6s;-webkit-transition-delay:0.2s">C</i><i-->
-                        <!--style="transition-delay:0.4s;-webkit-transition-delay:0.3s">&nbsp;</i><i-->
-                        <!--style="transition-delay:0.3s;-webkit-transition-delay:0.3s">T</i><i-->
-                        <!--style="transition-delay:0.7s;-webkit-transition-delay:0.5s">E</i><i-->
-                        <!--style="transition-delay:0.6s;-webkit-transition-delay:0.4s">C</i><i-->
-                        <!--style="transition-delay:0.5s;-webkit-transition-delay:0.6s">H</i><i-->
-                        <!--style="transition-delay:0.2s;-webkit-transition-delay:0.6s">N</i><i-->
-                        <!--style="transition-delay:0.2s;-webkit-transition-delay:0.6s">O</i><i-->
-                        <!--style="transition-delay:0.2s;-webkit-transition-delay:0.6s">L</i><i-->
-                        <!--style="transition-delay:0.2s;-webkit-transition-delay:0.6s">O</i><i-->
-                        <!--style="transition-delay:0.2s;-webkit-transition-delay:0.6s">G</i><i-->
-                        <!--style="transition-delay:0.4s;-webkit-transition-delay:0.3s">Y</i></p>-->
-            </div>
-            <div class="list sd" style="display: none;">
-                <div class="close"></div>
-                <div class="inner index" tabindex="5000" style="overflow: auto; outline: none;">
-
-
-
-                    <div class="item"><img src="image/s57fde8df30823.jpg">
-                        <div class="mask"><span class="b"></span>
-                            <h3><a link="Sulwhasoo.html">
-                                <strong>雪花秀</strong>
-                                <em>Sulwhasoo</em>
-                            </a></h3>
-                        </div>
-                    </div>
-                    <div class="item"><img src="image/s57fddbd5c87e1.jpg">
-                        <div class="mask"><span class="b"></span>
-                            <h3><a link="LANEIGE.html">
-                                <strong>兰芝</strong>
-                                <em>LANEIGE</em>
-                            </a></h3>
-                        </div>
-                    </div>
-
-                    <!--<div class="item"><img src="image/s57fddbd5c87e1.jpg">-->
-                        <!--<div class="mask"><span class="b"></span>-->
-                            <!--<h3><a link="LED.html">-->
-                                <!--<strong>LED</strong>-->
-                                <!--<em>LANEIGE</em>-->
-                            <!--</a></h3>-->
-                        <!--</div>-->
-                    <!--</div>-->
-
-                    <div class="item"><img src="image/s57fddcd762b67.jpg">
-                        <div class="mask"><span class="b"></span>
-                            <h3><a link="Mamonde.html">
-                                <strong>梦妆</strong>
-                                <em>Mamonde</em>
-                            </a></h3>
-                        </div>
-                    </div>
-                    <div class="item"><img src="image/s57fdde6b49bc1.jpg">
-                        <div class="mask"><span class="b"></span>
-                            <h3><a link="Innisfree.html">
-                                <strong>悦诗风吟</strong>
-                                <em>Innisfree</em>
-                            </a></h3>
-                        </div>
-                    </div>
-                    <div class="item"><img src="image/s57fdeb2228f4e.jpg">
-                        <div class="mask"><span class="b"></span>
-                            <h3><a link="hundredleaves.html">
-                                <strong>佰草集</strong>
-                                <em>Click to view details</em>
-                            </a></h3>
-                        </div>
-                    </div>
-                    <div class="item"><img src="image/s57fdeba0dc416.jpg">
-                        <div class="mask"><span class="b"></span>
-                            <h3><a link="HERA.html">
-                                <strong>赫拉</strong>
-                                <em>HERA</em>
-                            </a></h3>
-                        </div>
-                    </div>
-                    <div class="item"><img src="image/s57fdec82c3153.jpg">
-                        <div class="mask"><span class="b"></span>
-                            <h3><a link="ETUDE.html">
-                                <strong>伊蒂之屋</strong>
-                                <em>ETUDE</em>
-                            </a></h3>
-                        </div>
-                    </div>
-                    <div class="item"><img src="image/s57fdee2109724.jpg">
-                        <div class="mask"><span class="b"></span>
-                            <h3><a link="IOPE.html">
-                                <strong>IOPE</strong>
-                                <em>Click to view details</em>
-                            </a></h3>
-                        </div>
-                    </div>
-                    <div class="item"><img src="image/s5800a1299f9ab.jpg">
-                        <div class="mask"><span class="b"></span>
-                            <h3><a link="KATE.html">
-                                <strong>KATE</strong>
-                                <em>Click to view details</em>
-                            </a></h3>
-                        </div>
-                    </div>
-
-                    <div class="item"><img src="image/Clarins.jpg">
-                        <div class="mask"><span class="b"></span>
-                            <h3><a link="Clarins.html">
-                                <strong>Clarins</strong>
-                                <em>法国娇韵诗</em>
-                            </a></h3>
-                        </div>
-                    </div>
-
-
-                    <div class="item"><img src="image/s57fe0bb9de472.jpg">
-                        <div class="mask"><span class="b"></span>
-                            <h3><a link="closet.html">
-                                <strong>全透橱窗LED</strong>
-                                <em>透明屏</em>
-                            </a></h3>
-                        </div>
-                    </div>
-
-
-                    <div class="item"><img src="image/s57fdf3bdf08ae.jpg">
-                        <div class="mask"><span class="b"></span>
-                            <h3><a link="bare3d.html">
-                                <strong>裸眼3D屏</strong>
-                                <em>单屏/拼接屏-设备方案及视频制作</em>
-                            </a></h3>
-                        </div>
-                    </div>
-
-
-                    <div class="item"><img src="image/s57fe0d4cd1c4b.jpg">
-                        <div class="mask"><span class="b"></span>
-                            <h3><a link="LED.html">
-                                <strong>室内/户外LED大屏</strong>
-                                <em>发光二极管</em>
-                            </a></h3>
-                        </div>
-                    </div>
-
-                    <div class="item"><img src="image/s57fe0d9b29b44.jpg">
-                        <div class="mask"><span class="b"></span>
-                            <h3><a link="touch.html">
-                                <strong>触控屏</strong>
-                                <em>软件及解决方案</em>
-                            </a></h3>
-                        </div>
-                    </div>
-
-
-
-                    <div class="item"><img src="image/AviationTitanjum.jpg">
-                        <div class="mask"><span class="b"></span>
-                            <h3><a link="AviationTitanjum.html">
-                                <strong>航空钛合金</strong>
-                                <em>支架及解决方案</em>
-                            </a></h3>
-                        </div>
-                    </div>
-
-
-
-                    <div class="item"><img src="image/gdzl_bg.jpg">
-                        <div class="mask"><span class="b"></span>
-                            <h3><a link="gdzl.html" type="menu">
-                                <strong>光电租赁</strong>
-                                <em>Phonelectric lease</em>
-                            </a></h3>
-                        </div>
-                    </div>
-
-
-                    <div class="item"><img src="image/newStore_bg.jpg">
-                        <div class="mask"><span class="b"></span>
-                            <h3><a link="NewStore.html" type="menu" >
-                                <strong>新店店装</strong>
-                                <em>New Store</em>
-                            </a></h3>
-                        </div>
-                    </div>
-
-
-
-
-
-
-                </div>
-                <div id="ascrail2000" class="nicescroll-rails"
-                     style="width: 6px; z-index: 1; background: rgb(85, 85, 85); position: absolute; cursor: default; top: 35px; left: 1689px; height: 663px; opacity: 0.2; display: none;">
-                    <div style="position: relative; float: right; width: 6px; background-color: rgb(204, 204, 204); border: none; background-clip: padding-box; border-radius: 5px; height: 98px; top: 0px;"></div>
-                </div>
-                <div id="ascrail2000-hr" class="nicescroll-rails"
-                     style="height: 6px; z-index: 1; background: rgb(85, 85, 85); position: absolute; cursor: default; top: 692px; left: 35px; width: 1654px; opacity: 0.2; display: none;">
-                    <div style="position: relative; top: 0px; height: 6px; background-color: rgb(204, 204, 204); border: none; background-clip: padding-box; border-radius: 5px; width: 1660px;"></div>
-                </div>
-            </div>
-
-            <div class="case_detail js_case_detail" style="display: none; left: 0px; top: 0px; right: 0px; bottom: 0px;">
-                <div class="close"></div>
-                <div class="content"></div>
-                <div class="loading" style="display: block;">
-                    <div class="spinner">
-                        <div class="spinner-container container1">
-                            <div class="circle1"></div>
-                            <div class="circle2"></div>
-                            <div class="circle3"></div>
-                            <div class="circle4"></div>
-                        </div>
-                        <div class="spinner-container container2">
-                            <div class="circle1"></div>
-                            <div class="circle2"></div>
-                            <div class="circle3"></div>
-                            <div class="circle4"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="case_detail case_menu js_case_menu" style="display: none; left: 0px; top: 0px; right: 0px; bottom: 0px;">
-                <div class="close"></div>
-                <div class="content"></div>
-                <div class="loading" style="display: block;">
-                    <div class="spinner">
-                        <div class="spinner-container container1">
-                            <div class="circle1"></div>
-                            <div class="circle2"></div>
-                            <div class="circle3"></div>
-                            <div class="circle4"></div>
-                        </div>
-                        <div class="spinner-container container2">
-                            <div class="circle1"></div>
-                            <div class="circle2"></div>
-                            <div class="circle3"></div>
-                            <div class="circle4"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
+
+
 </div>
 <div class="st" style="position:fixed;left:0;top:0; background:rgba(0,0,0,0.5);color:#fff;z-index:100;"></div>
 <script>
     var sw = 0;
 
-    //自适应
-    var svgw = $(".case .svg").height() / 690 * 1325;
-    $(".case .svg").width(svgw);
-    $(".case .polygon .p").css({width: svgw / 5, height: $(".case .svg").height() / 3});
-    $(window).resize(function () {
-        svgw = $(".case .svg").height() / 690 * 1325;
-        $(".case .svg").width(svgw);
-        $(".case .polygon .p").css({width: svgw / 5, height: $(".case .svg").height() / 3});
-    });
-
-
     $(function () {
-        winload();
 
-        $('.music-name').webTicker({speed:20,direction: 'right'})
+        if($(window).width()/$(window).height()>1920/1080){
+            $(".vbg").height($(window).width()/1920*1080);
+        }
+        else{
+            $(".vbg").width($(window).height()/1080*1920);
+        }
+        var sto1;
+        $(window).resize(function(){
+            clearTimeout(sto1);
+            sto1=setTimeout(function(){
+                if($(window).width()/$(window).height()>1920/1080){
+                    $(".vbg").height($(window).width()/1920*1080);
+                }
+                else{
+                    $(".vbg").width($(window).height()/1080*1920);
+                }
+            },100);
+        });
+        var vd1 = document.getElementById('vbg1');
+        var vd2 = document.getElementById('vbg2');
+        function chooesvideo(){
+            var d=new Date();
+            if(d.getHours()>7 && d.getHours()<19 ){
+                vd1.addEventListener("loadedmetadata",function(){
+                    vd1.play();
+                });
+                vd2.pause();
+                $("#vbg1").fadeIn(1000);
+                $("#vbg2").fadeOut(1000);
+                $(".vbgm:first").fadeIn(1000);
+                $(".vbgm:last").fadeOut(1000);
+            }
+            else{
+                vd1.pause();
+                vd2.addEventListener("loadedmetadata",function(){
+                    vd2.play();
+                });
+                $("#vbg1").fadeOut(1000);
+                $("#vbg2").fadeIn(1000);
+                $(".vbgm:first").fadeOut(1000);
+                $(".vbgm:last").fadeIn(1000);
+            }
+        }
+        chooesvideo();
+        setInterval(function(){
+            chooesvideo();
+        },6000);
+
+        if($(window).width()<1000){
+            $(".vbg").remove();
+        }
+        else{
+            $(".vbgm").remove();
+        }
+
+
+        $('.music-name').webTicker({speed: 20, direction: 'right'})
         var music = document.getElementById("audioBgm");//获取ID  
         var flagPlay = true;
 
         //点击切换播放
         $(".share .a4").click(function () {
-            if($(this).hasClass("active")){//如果当前播放
+            if ($(this).hasClass("active")) {//如果当前播放
                 $(this).removeClass("active");
 
                 music.play();  //开始播
                 flagPlay = true;
 
-            }else{ //如果当前暂停
+            } else { //如果当前暂停
                 $(this).addClass("active");
                 music.pause();  //开始播放
                 flagPlay = false;
             }
         }).easyAudioEffects({
-            mp3 : "./audio/chime.mp3",
-            eventType : 'click'
+            mp3: "./audio/chime.mp3",
+            eventType: 'click'
         });
-
 
 
         function toggleSound() {
             if (music.paused && flagPlay) { //判读是否播放  
-                music.paused=false;
+                music.paused = false;
                 music.play(); //没有就播放 
             }
         }
 
-        setInterval(toggleSound,100);
+        setInterval(toggleSound, 100);
 
 
-//        $('#trigger-2-click').click(function(){
-//            console.log('1111')
-//        }).easyAudioEffects({
-//            mp3 : "./audio/chime.mp3",
-//            eventType : 'click'
-//        });
-
-
-        line = new Vivus('line', {type: 'async', duration: 150, pathTimingFunction: Vivus.EASE});
-        $(".polygon .p").each(function (index, element) {
-            var t = $(this);
-            setTimeout(function () {
-                t.transit({opacity: 1}, 1000, function () {
-                });
-                t.find(".pic2").transit({translate: "0%,0%", scale: "1",}, 1000, "cubic-bezier(0,1,1,1)");
-            }, GetRandomNum(5, 30) * 100);
-            t.find(".bdr").css({
-                "animation-delay": 0.1 * GetRandomNum(5, 70) + "s",
-                "-webkit-animation-delay": 0.1 * GetRandomNum(5, 70) + "s"
-            });
-        });
-
-        settit(".title h1");
-        settit(".title p");
-        showtt(".title h1");
-        showtt(".title p", 1000);
-        setTimeout(function () {
-            $(".banner .frame").transit({scale: "1.05"}, 1000, function () {
-                sw = 1;
-            });
-        }, 3000);
-
-        var x1 = 0;
-        var stv1 = setInterval(function () {
-            $(".polygon .p").each(function (index, element) {
-                $(this).find(".bdr").css({
-                    "animation-delay": 0.1 * GetRandomNum(5, 70) + "s",
-                    "-webkit-animation-delay": 0.1 * GetRandomNum(5, 70) + "s"
-                });
-            });
-            x1++;
-            if (x1 >= 30) {
-                clearInterval(stv1);
-            }
-        }, 8000);
-    });
-
-    $(window).load(function () {
-
-    });
-
-
-    //滚轮触发
-    $(".case").mousewheel(function (event, delta, deltaX, deltaY) {
-        if (sw == 1) {
-            if (delta < 0) {
-                idx = 2;
-                run(idx);
-            }
-            else {
-                idx = 1;
-                run(idx);
-            }
-        }
-    });
-
-    $(".case").click(function () {
-        if (sw == 1) {
-            run(2);
-        }
-    });
-    $('.case').bind("touchend", function () {
-        if (sw == 1) {
-            run(2);
-        }
-    });
-
-    function run(idx) {
-        if (idx == 1) {
-            /*if($(".case .list").hasClass("show") && $(".case .list").scrollTop()==0){
-             sw=0;
-
-             }*/
-        }
-        if (idx == 2) {
-            if (!$(".case .list").hasClass("show")) {
-                sw = 0;
-                $("#line").fadeOut(1000);
-                var af = "cubic-bezier(1,0,0.7,1)";
-                $(".polygon .p").eq(0).delay(150).transit({
-                    opacity: 1,
-                    translate: "-200px,-300px",
-                    rotateX: "25deg",
-                    rotateY: "-45deg",
-                    rotateZ: "-20deg"
-                }, 700, af);
-                $(".polygon .p").eq(1).delay(100).transit({
-                    opacity: 1,
-                    translate: "-500px,-200px",
-                    rotateX: "45deg",
-                    rotateY: "-45deg",
-                    rotateZ: "-0deg"
-                }, 700, af);
-                $(".polygon .p").eq(2).delay(150).transit({
-                    opacity: 1,
-                    translate: "-300px,300px",
-                    rotateX: "-90deg",
-                    rotateZ: "-30deg"
-                }, 700, af);
-                $(".polygon .p").eq(3).transit({
-                    opacity: 1,
-                    scale: "1.6",
-                    translate: "-500px,0px",
-                    rotateX: "-20deg",
-                    rotateY: "-80deg",
-                    rotateZ: "-35deg"
-                }, 700, af);
-                $(".polygon .p").eq(4).delay(100).transit({
-                    opacity: 1,
-                    scale: "1.3",
-                    translate: "0,-200px",
-                    rotateX: "-90deg"
-                }, 700, af);
-                $(".polygon .p").eq(5).delay(100).transit({
-                    opacity: 1,
-                    scale: "1.3",
-                    translate: "0,200px",
-                    rotateX: "90deg"
-                }, 700, af);
-                $(".polygon .p").eq(6).transit({
-                    opacity: 1,
-                    scale: "1.6",
-                    translate: "600px,200px",
-                    rotateX: "-50deg",
-                    rotateZ: "0deg",
-                    rotateY: "80deg"
-                }, 700, af);
-                $(".polygon .p").eq(7).delay(100).transit({
-                    opacity: 1,
-                    translate: "400px,400px",
-                    rotateX: "-90deg",
-                    rotateZ: "30deg"
-                }, 700, af);
-                $(".polygon .p").eq(8).delay(150).transit({
-                    opacity: 1,
-                    translate: "400px,-300px",
-                    rotateX: "45deg",
-                    rotateY: "45deg"
-                }, 700, af);
-                $(".polygon").delay(300).fadeOut(700);
-                $(".title").transit({scale: "3", opacity: 0}, 500, "cubic-bezier(1,0,1,1)", function () {
-                    $(this).children().removeClass("act");
-                });
-                $(".banner .frame").delay(600).transit({scale: "1.3"}, 2000, "cubic-bezier(0,1,1,1)");
-                $(".caseshadow").delay(1000).fadeIn(1000);
-
-                setTimeout(function () {
-                    $(".case .list").fadeIn(1000, function () {
-                        if ($(".case .list").hasClass("sd")) {
-                            if ($(window).width() > 1000) {
-                                $(this).find(".inner").niceScroll({
-                                    cursorcolor:"#ccc",
-                                    cursorborder:"none",
-                                    cursorwidth:"6px",
-                                    scrollspeed:80,
-                                    background:"#555",
-                                    cursoropacitymin:0.2,
-                                    cursoropacitymax:1,
-                                    enablekeyboard:false,
-                                    zindex:0
-                                });
-                            }
-                            $(".case .list").addClass("sd");
-                        }
-                    }).addClass("show");
-                    $(".case .list .inner").scrollTop(0);
-                    sw = 1;
-                }, 1000);
-            }
-        }
-    }
-
-    $(".case .list .close").click(function () {
-        if (sw == 1) {
-            sw = 0;
-            $(".caseshadow").fadeOut(500);
-            $(".case .list").fadeOut(500, function () {
-                $(".banner .frame").transit({scale: "1.05", translate: "0,0"}, 2000, "cubic-bezier(0,1,1,1)");
-                $(".case .title").css({translate: "0,0"});
-
-                $("#line").show()
-                line.reset().play();
-                $(".polygon").show();
-                $(".polygon .p").transit({
-                    translate: "0,0",
-                    rotateX: 0,
-                    rotateY: 0,
-                    rotateZ: 0,
-                    scale: 1,
-                    opacity: 0
-                }, 0);
-                ;
-                $(".polygon .pic2").transit({translate: "15%,21%", scale: "0.7"}, 0);
-                $(".polygon .p").each(function (index, element) {
-                    var t = $(this);
-                    setTimeout(function () {
-                        t.transit({opacity: 1}, 1500);
-                        t.find(".pic2").transit({translate: "0%,0%", scale: "1"}, 1000, "cubic-bezier(0,1,1,1)");
-                    }, GetRandomNum(10, 40) * 100);
-                    t.find(".bdr").css({
-                        "animation-delay": 0.1 * GetRandomNum(5, 70) + "s",
-                        "-webkit-animation-delay": 0.1 * GetRandomNum(5, 70) + "s"
-                    });
-                });
-                $(".title").transit({scale: "1", opacity: 1}, 0);
-                showtt(".title h1");
-                showtt(".title p", 1000);
-
-                $(".case .list").removeClass("show");
-                setTimeout(function () {
-                    sw = 1;
-                    $('.case').removeClass("donw");
-                }, 4000);
-            });
-        }
-    }).easyAudioEffects({
-        mp3 : "./audio/chime.mp3",
-        eventType : 'click'
-    });
-
-
-    var x, y;
-    var h = $("body").height() / 2;
-    var w = $("body").outerWidth() / 2;
-    $(window).resize(function () {
-        h = $("body").height() / 2;
-        w = $("body").outerWidth() / 2;
-    });
-    $("body").mousemove(function (event) {
-        x = event.clientX;
-        y = event.clientY;
-        if (sw == 1) {
-            $(".case .title").css({translate: Math.floor((x - w) * 0.04) + "," + Math.floor((y - h) * 0.06)});
-            $(".banner .frame").css({translate: Math.floor((x - w) * 0.02) * -1 + "," + Math.floor((y - h) * 0.05) * -1});
-        }
-    });
-    if (window.DeviceMotionEvent) {
-        var x1, y1;
-        window.addEventListener('devicemotion', function () {
-            var acceleration = event.accelerationIncludingGravity;
-            x1 = acceleration.x;
-            y1 = acceleration.y;
+        $(".case .list .close").click(function () {
             if (sw == 1) {
-                //$(".st").html((x1)+"<br/>"+(y1));
-                $(".case .title").css({translate: Math.floor(x1 * 1) + "," + Math.floor(y1 * 1)});
-                $(".banner .frame").css({translate: Math.floor(x1 * 3) + "," + Math.floor(y1 * 3)});
-            }
-        }, false);
-    }
+                sw = 0;
+                $(".caseshadow").fadeOut(500);
+                $(".case .list").fadeOut(500, function () {
+                    $(".banner .frame").transit({scale: "1.05", translate: "0,0"}, 2000, "cubic-bezier(0,1,1,1)");
+                    $(".case .title").css({translate: "0,0"});
 
-    $(".js_case_menu .close").click(function () {
-        $(".js_case_menu").fadeOut(400, function () {
-            $(".js_case_menu").find(".content").html("");
-//            $(".js_case_menu .loading").show();
-        });
-    }).easyAudioEffects({
-        mp3 : "./audio/chime.mp3",
-        eventType : 'click'
-    });
-
-    $(".js_case_detail .close").click(function () {
-        $(".js_case_detail").fadeOut(400, function () {
-            $(".js_case_detail").find(".content").html("");
-//            $(".js_case_detail .loading").show();
-        });
-    }).easyAudioEffects({
-        mp3 : "./audio/chime.mp3",
-        eventType : 'click'
-    });
-
-    var cx = 0;
-    cy = 0;
-    $(".case .list").mousemove(function (event) {
-        cx = event.clientX - $(this).offset().left;
-        cy = event.clientY - $(this).offset().top;
-    });
-
-
-    $(".case .list .index .item").click(function () {
-        var t = $(this).find("a");
-
-        var _detail = t.attr('type')==='menu' ? $(".js_case_menu") : $(".js_case_detail");
-
-        _detail.css({
-            left: cx,
-            top: cy,
-            right: $(".case .list").outerWidth() - cx,
-            bottom: $(".case .list").outerHeight() - cy
-        }).show();
-        _detail.transit({left: 0, top: 0, right: 0, bottom: 0}, 600, "cubic-bezier(0,1,0.6,1)", function () {
-            var d = new Date();
-            $(this).find(".content").load(t.attr("link") + "?" + d.getTime(), function () {
-                _detail.find('.loading').fadeOut(300);
-                if ($(window).width() > 1000) {
-                    $(this).find(".pic").niceScroll({
-                        cursorcolor: "#bbb",
-                        cursorborder: "none",
-                        cursorwidth: "6px",
-                        scrollspeed: 80,
-                        background: "#333",
-                        cursoropacitymin: 1,
-                        cursoropacitymax: 1,
-                        enablekeyboard: false,
-                        zindex: 1
+                    $("#line").show()
+                    line.reset().play();
+                    $(".polygon").show();
+                    $(".polygon .p").transit({
+                        translate: "0,0",
+                        rotateX: 0,
+                        rotateY: 0,
+                        rotateZ: 0,
+                        scale: 1,
+                        opacity: 0
+                    }, 0);
+                    ;
+                    $(".polygon .pic2").transit({translate: "15%,21%", scale: "0.7"}, 0);
+                    $(".polygon .p").each(function (index, element) {
+                        var t = $(this);
+                        setTimeout(function () {
+                            t.transit({opacity: 1}, 1500);
+                            t.find(".pic2").transit({translate: "0%,0%", scale: "1"}, 1000, "cubic-bezier(0,1,1,1)");
+                        }, GetRandomNum(10, 40) * 100);
+                        t.find(".bdr").css({
+                            "animation-delay": 0.1 * GetRandomNum(5, 70) + "s",
+                            "-webkit-animation-delay": 0.1 * GetRandomNum(5, 70) + "s"
+                        });
                     });
-                }
-            });
+                    $(".title").transit({scale: "1", opacity: 1}, 0);
+                    showtt(".title h1");
+                    showtt(".title p", 1000);
 
+                    $(".case .list").removeClass("show");
+                    setTimeout(function () {
+                        sw = 1;
+                        $('.case').removeClass("donw");
+                    }, 4000);
+                });
+            }
+        }).easyAudioEffects({
+            mp3: "./audio/chime.mp3",
+            eventType: 'click'
         });
-        return false;
-    }).easyAudioEffects({
-        mp3 : "./audio/chime.mp3",
-        eventType : 'click'
+
+
+        var x, y;
+        var h = $("body").height() / 2;
+        var w = $("body").outerWidth() / 2;
+        $(window).resize(function () {
+            h = $("body").height() / 2;
+            w = $("body").outerWidth() / 2;
+        });
+        $("body").mousemove(function (event) {
+            x = event.clientX;
+            y = event.clientY;
+            if (sw == 1) {
+                $(".case .title").css({translate: Math.floor((x - w) * 0.04) + "," + Math.floor((y - h) * 0.06)});
+                $(".banner .frame").css({translate: Math.floor((x - w) * 0.02) * -1 + "," + Math.floor((y - h) * 0.05) * -1});
+            }
+        });
+        if (window.DeviceMotionEvent) {
+            var x1, y1;
+            window.addEventListener('devicemotion', function () {
+                var acceleration = event.accelerationIncludingGravity;
+                x1 = acceleration.x;
+                y1 = acceleration.y;
+                if (sw == 1) {
+                    //$(".st").html((x1)+"<br/>"+(y1));
+                    $(".case .title").css({translate: Math.floor(x1 * 1) + "," + Math.floor(y1 * 1)});
+                    $(".banner .frame").css({translate: Math.floor(x1 * 3) + "," + Math.floor(y1 * 3)});
+                }
+            }, false);
+        }
+
+        $(".js_case_menu .close").click(function () {
+            $(".js_case_menu").fadeOut(400, function () {
+                $(".js_case_menu").find(".content").html("");
+//            $(".js_case_menu .loading").show();
+            });
+        }).easyAudioEffects({
+            mp3: "./audio/chime.mp3",
+            eventType: 'click'
+        });
+
+        $(".js_case_detail .close").click(function () {
+            $(".js_case_detail").fadeOut(400, function () {
+                $(".js_case_detail").find(".content").html("");
+//            $(".js_case_detail .loading").show();
+            });
+        }).easyAudioEffects({
+            mp3: "./audio/chime.mp3",
+            eventType: 'click'
+        });
+
+        var cx = 0;
+        cy = 0;
+        $(".case .list").mousemove(function (event) {
+            cx = event.clientX - $(this).offset().left;
+            cy = event.clientY - $(this).offset().top;
+        });
+
+
+        $(".case .list .index .item").click(function () {
+            var t = $(this).find("a");
+
+            var _detail = t.attr('type') === 'menu' ? $(".js_case_menu") : $(".js_case_detail");
+
+            _detail.css({
+                left: cx,
+                top: cy,
+                right: $(".case .list").outerWidth() - cx,
+                bottom: $(".case .list").outerHeight() - cy
+            }).show();
+            _detail.transit({left: 0, top: 0, right: 0, bottom: 0}, 600, "cubic-bezier(0,1,0.6,1)", function () {
+                var d = new Date();
+                $(this).find(".content").load(t.attr("link") + "?" + d.getTime(), function () {
+                    _detail.find('.loading').fadeOut(300);
+                    if ($(window).width() > 1000) {
+                        $(this).find(".pic").niceScroll({
+                            cursorcolor: "#bbb",
+                            cursorborder: "none",
+                            cursorwidth: "6px",
+                            scrollspeed: 80,
+                            background: "#333",
+                            cursoropacitymin: 1,
+                            cursoropacitymax: 1,
+                            enablekeyboard: false,
+                            zindex: 1
+                        });
+                    }
+                });
+
+            });
+            return false;
+        }).easyAudioEffects({
+            mp3: "./audio/chime.mp3",
+            eventType: 'click'
+        });
     });
+
 </script>
 <div class="footer">
     <div class="left">
