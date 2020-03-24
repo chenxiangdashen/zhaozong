@@ -18,6 +18,7 @@
     <link href="./css/fix.css" rel="stylesheet" type="text/css">
 
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/pointstyle.css" rel="stylesheet" type="text/css"/>
 
     <!--[if IE]>
     <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
@@ -124,37 +125,36 @@
     <div class="main"><span class="bdr b1"></span><span class="bdr b2"></span><span class="bdr b3"></span><span
             class="bdr b4"></span>
 
-
         <div class="map-content map-branch">
+
+
+<!--            <span class="map-dot shanghai cur" data-id="shanghai" value="上海">上海</span>-->
+<!--            <span class="map-dot chongqing" data-id="chongqing" value="重庆">重庆</span>-->
+
+            <div class="circle-container beijing">
+                <div class="title">北京</div>
+                <div class="circle">
+                </div>
+            </div>
+
+            <div class="circle-container shanghai">
+                <div class="title">上海</div>
+                <div class="circle"></div>
+            </div>
+
+            <div class="circle-container chongqing">
+                <div class="title">重庆</div>
+                <div class="circle"></div>
+            </div>
+
+            <img src="./images/map.png" class="bg-img" alt="">
+
+
+
             <div class="map-module">
                 <div class="map-content-info">
                     <div class="branch-map-l">
-                        <div class="map-content-box">
-                            <span class="map-dot beijing" data-id="beijing" value="北京">北京</span>
-                            <span class="map-dot tianjin" data-id="tianjin" value="天津">天津</span>
-                            <span class="map-dot hebei" data-id="hebei" value="河北">河北</span>
-                            <span class="map-dot shanxi" data-id="shanxi" value="山西">山西</span>
-                            <span class="map-dot liaoning" data-id="liaoning" value="辽宁">辽宁</span>
-                            <span class="map-dot jilin" data-id="jilin" value="吉林">吉林</span>
-                            <span class="map-dot heilongjiang" data-id="heilongjiang" value="黑龙江">黑龙江</span>
-                            <span class="map-dot shanghai cur" data-id="shanghai" value="上海">上海</span>
-                            <span class="map-dot jiangsu" data-id="jiangsu" value="江苏">江苏</span>
-                            <span class="map-dot zhejiang" data-id="zhejiang" value="浙江">浙江</span>
-                            <span class="map-dot anhui" data-id="anhui" value="安徽">安徽</span>
-                            <span class="map-dot fujian" data-id="fujian" value="福建">福建</span>
-                            <span class="map-dot jiangxi" data-id="jiangxi" value="江西">江西</span>
-                            <span class="map-dot shandong" data-id="shandong" value="山东">山东</span>
-                            <span class="map-dot henan" data-id="henan" value="河南">河南</span>
-                            <span class="map-dot hubei" data-id="hubei" value="湖北">湖北</span>
-                            <span class="map-dot hunan" data-id="hunan" value="湖南">湖南</span>
-                            <span class="map-dot guangdong" data-id="guangdong" value="广东">广东</span>
-                            <span class="map-dot guangxi" data-id="guangxi" value="广西">广西</span>
-                            <span class="map-dot chongqing" data-id="chongqing" value="重庆">重庆</span>
-                            <span class="map-dot sichuan" data-id="sichuan" value="四川">四川</span>
-                            <span class="map-dot guizhou" data-id="guizhou" value="贵州">贵州</span>
-                            <span class="map-dot yunnan" data-id="yunnan" value="云南">云南</span>
-                            <span class="map-dot shanxi1" data-id="shanxi1" value="陕西">陕西</span>
-                        </div>
+
                         <div class="branch-map-data" id="company_liaoning">
                             <div class="branch-map-data-title">
                                 <p>辽宁</p>
@@ -224,26 +224,14 @@
         var vd2 = document.getElementById('vbg2');
         function chooesvideo(){
             var d=new Date();
-            if(d.getHours()>7 && d.getHours()<19 ){
-                vd1.addEventListener("loadedmetadata",function(){
-                    vd1.play();
-                });
-                vd2.pause();
-                $("#vbg1").fadeIn(1000);
-                $("#vbg2").fadeOut(1000);
-                $(".vbgm:first").fadeIn(1000);
-                $(".vbgm:last").fadeOut(1000);
-            }
-            else{
-                vd1.pause();
-                vd2.addEventListener("loadedmetadata",function(){
-                    vd2.play();
-                });
-                $("#vbg1").fadeOut(1000);
-                $("#vbg2").fadeIn(1000);
-                $(".vbgm:first").fadeOut(1000);
-                $(".vbgm:last").fadeIn(1000);
-            }
+            vd1.pause();
+            vd2.addEventListener("loadedmetadata",function(){
+                vd2.play();
+            });
+            $("#vbg1").fadeOut(1000);
+            $("#vbg2").fadeIn(1000);
+            $(".vbgm:first").fadeOut(1000);
+            $(".vbgm:last").fadeIn(1000);
         }
         chooesvideo();
         setInterval(function(){

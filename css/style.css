@@ -77,12 +77,17 @@
 
 /* 必要布局样式css */
 .map-content {
-    /*position: absolute;*/
+    position: absolute;
     /*z-index: 99;*/
 }
 
+.map-content .bg-img {
+    height:400px;
+    /*width: 100%;*/
+    /*height: 100%;*/
+}
+
 .map-module {
-    width: 1200px !important;
     margin: 0 auto;
     position: relative;
     transition: all .3s ease;
@@ -129,15 +134,15 @@
 }
 
 .branch-map-l {
-    width: 849px;
-    height: 575px;
+    /*width: 849px;*/
+    /*height: 575px;*/
     position: relative;
 }
 
 .map-content-box {
     width: 100%;
     height: 100%;
-    background: url("../images/map.png") no-repeat center;
+    /*background: url("../images/map.png") no-repeat center;*/
     position: relative;
 }
 
@@ -148,141 +153,16 @@
     cursor: pointer;
 }
 
-.beijing {
-    left: 585px;
-    top: 220px;
-}
 
-.tianjin {
-    left: 604px;
-    top: 234px;
-}
-
-.hebei {
-    left: 575px;
-    top: 254px;
-}
-
-.shanxi {
-    left: 540px;
-    top: 276px;
-}
-
-.liaoning {
-    left: 660px;
-    top: 196px;
-}
-
-.jilin {
-    left: 696px;
-    top: 167px;
-}
-
-.heilongjiang {
-    left: 676px;
-    top: 106px;
-}
-
-.shanghai {
-    left: 668px;
-    top: 341px;
-}
-
-.jiangsu {
-    left: 646px;
-    top: 316px;
-}
-
-.zhejiang {
-    left: 655px;
-    top: 379px;
-}
-
-.anhui {
-    left: 605px;
-    top: 334px;
-}
-
-.fujian {
-    left: 625px;
-    top: 428px;
-}
-
-.jiangxi {
-    left: 595px;
-    top: 402px;
-}
-
-.shandong {
-    left: 610px;
-    top: 284px;
-}
-
-.henan {
-    left: 562px;
-    top: 316px;
-}
-
-.hubei {
-    left: 555px;
-    top: 359px;
-}
-
-.hunan {
-    left: 545px;
-    top: 409px;
-}
-
-.guangdong {
-    left: 575px;
-    top: 466px;
-}
-
-.guangxi {
-    left: 506px;
-    top: 461px;
-}
-
-.chongqing {
-    left: 495px;
-    top: 364px;
-}
-
-.sichuan {
-    left: 425px;
-    top: 354px;
-}
-
-.guizhou {
-    left: 484px;
-    top: 424px;
-}
-
-.yunnan {
-    left: 405px;
-    top: 462px;
-}
-
-.shanxi1 {
-    left: 502px;
-    top: 312px;
-}
 
 .map-dot:after {
     content: "";
     display: block;
-    width: 8px;
-    height: 8px;
-    margin: 0 auto;
-    background-color: #01B7BD;
-    border-radius: 50%;
-}
-
-.map-dot.beijing:after {
-    width: 13px;
+    width: 12px;
     height: 12px;
-    border-radius: 0;
-    background: url("../images/icon-star.png") no-repeat center;
+    margin: 0 auto;
+    background-color: #b6b4bd;
+    border-radius: 50%;
 }
 
 .branch-map-data {
