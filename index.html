@@ -20,6 +20,9 @@
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
     <link href="css/pointstyle.css" rel="stylesheet" type="text/css"/>
 
+
+    <link rel="stylesheet" href="plugin/css/jquery.richUI.min.css"/>
+
     <!--[if IE]>
     <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
     <![endif]-->
@@ -31,6 +34,10 @@
     <script src="./js/jquery.mousewheel.js"></script>
     <script src="./js/easyAudioeffiects.js"></script>
     <script type="text/javascript" src="./js/jquery.webticker.js"></script>
+
+
+    <script type="text/javascript" src="plugin/js/jquery.richUI.min.js"></script>
+    <script type="text/javascript" src="plugin/js/jquery.browser.min.js"></script>
     <style>
 
         /*::-webkit-scrollbar-thumb {*/
@@ -64,10 +71,12 @@
 <body class="loaded">
 
 
-
 <div class="header">
     <a href="#" class="logo"></a>
+
     <div class="r">
+        <select id="mySelect" name="company">
+        </select>
         <div class="t">
             <div class="link">上海海恭光电科技有限公司</div>
             <!--<div class="tel"></div>-->
@@ -111,8 +120,10 @@
             <source src="./image/New/bg_n.webm" type="video/webm"></source>
         </video>
 
-        <div class="vbgm" style="background:url(image/New/video1.jpg) center center no-repeat;background-size:cover;"></div>
-        <div class="vbgm" style="background:url(image/New/video2.jpg) center center no-repeat;background-size:cover;"></div>
+        <div class="vbgm"
+             style="background:url(image/New/video1.jpg) center center no-repeat;background-size:cover;"></div>
+        <div class="vbgm"
+             style="background:url(image/New/video2.jpg) center center no-repeat;background-size:cover;"></div>
 
     </div>
 
@@ -125,30 +136,29 @@
     <div class="main"><span class="bdr b1"></span><span class="bdr b2"></span><span class="bdr b3"></span><span
             class="bdr b4"></span>
 
-        <div class="map-content map-branch">
+        <div id="map_content" class="map-content map-branch">
 
 
-<!--            <span class="map-dot shanghai cur" data-id="shanghai" value="上海">上海</span>-->
-<!--            <span class="map-dot chongqing" data-id="chongqing" value="重庆">重庆</span>-->
+            <!--            <span class="map-dot shanghai cur" data-id="shanghai" value="上海">上海</span>-->
+            <!--            <span class="map-dot chongqing" data-id="chongqing" value="重庆">重庆</span>-->
 
-            <div class="circle-container beijing">
-                <div class="title">北京</div>
-                <div class="circle">
-                </div>
-            </div>
+<!--            <div class="circle-container beijing">-->
+<!--                <div class="title">北京</div>-->
+<!--                <div class="circle">-->
+<!--                </div>-->
+<!--            </div>-->
 
-            <div class="circle-container shanghai">
-                <div class="title">上海</div>
-                <div class="circle"></div>
-            </div>
+<!--            <div class="circle-container shanghai">-->
+<!--                <div class="title">上海</div>-->
+<!--                <div class="circle"></div>-->
+<!--            </div>-->
 
-            <div class="circle-container chongqing">
-                <div class="title">重庆</div>
-                <div class="circle"></div>
-            </div>
+<!--            <div class="circle-container chongqing">-->
+<!--                <div class="title">重庆</div>-->
+<!--                <div class="circle"></div>-->
+<!--            </div>-->
 
             <img src="./images/map.png" class="bg-img" alt="">
-
 
 
             <div class="map-module">
@@ -165,7 +175,7 @@
                                     <p>地址： 大连市合众分公司</p>
                                     <p>总机：0411-90xxxx88</p>
                                     <p>传真：0411-09xxxx88</p>
-                                    <p>网址： <a href="#" >www.jq22.com</a></p>
+                                    <p>网址： <a href="#">www.jq22.com</a></p>
                                 </div>
                                 <div class="data-branch">
                                     <a href="#" target="_blank" title=""><p class="data-name">沈阳分公司</p></a>
@@ -182,7 +192,7 @@
                                     <p>总机：0416-3864222</p>
                                     <p>传真：0416-3882060</p>
                                     <p>
-                                        网址： <a href="#" >www.jq22.com</a></p>
+                                        网址： <a href="#">www.jq22.com</a></p>
                                     </p>
                                 </div>
                             </div>
@@ -200,32 +210,62 @@
 <script>
     var sw = 0;
 
+    var areaList = [
+        {name: '北京', value: 'beijing'},
+        {name: '上海', value: 'shanghai'},
+        {name: '重庆', value: 'chongqing'},
+        {name: '华北', value: 'huabei'},
+        {name: '华中', value: 'huazhong'},
+        {name: '华东', value: 'huadong'},
+        {name: '华南', value: 'huanan'},
+        {name: '东北', value: 'dongbei'},
+        {name: '西北', value: 'xibei'},
+        {name: '西南', value: 'xinan'},
+    ]
+
     $(function () {
 
-        if($(window).width()/$(window).height()>1920/1080){
-            $(".vbg").height($(window).width()/1920*1080);
-        }
-        else{
-            $(".vbg").width($(window).height()/1080*1920);
+        areaList.forEach(function (item, index) {
+            $("#mySelect").append($(`<option value="${item.value}" >${item.name}</option>`))
+            $("#map_content")
+                .append($(`
+                    <div class="circle-container ${item.value}">
+                        <div class="title">${item.name}</div>
+                        <div class="circle">
+                        </div>
+                    </div>`
+                ))
+
+
+        })
+
+
+        $("#mySelect").richselect();
+
+
+        if ($(window).width() / $(window).height() > 1920 / 1080) {
+            $(".vbg").height($(window).width() / 1920 * 1080);
+        } else {
+            $(".vbg").width($(window).height() / 1080 * 1920);
         }
         var sto1;
-        $(window).resize(function(){
+        $(window).resize(function () {
             clearTimeout(sto1);
-            sto1=setTimeout(function(){
-                if($(window).width()/$(window).height()>1920/1080){
-                    $(".vbg").height($(window).width()/1920*1080);
+            sto1 = setTimeout(function () {
+                if ($(window).width() / $(window).height() > 1920 / 1080) {
+                    $(".vbg").height($(window).width() / 1920 * 1080);
+                } else {
+                    $(".vbg").width($(window).height() / 1080 * 1920);
                 }
-                else{
-                    $(".vbg").width($(window).height()/1080*1920);
-                }
-            },100);
+            }, 100);
         });
         var vd1 = document.getElementById('vbg1');
         var vd2 = document.getElementById('vbg2');
-        function chooesvideo(){
-            var d=new Date();
+
+        function chooesvideo() {
+            var d = new Date();
             vd1.pause();
-            vd2.addEventListener("loadedmetadata",function(){
+            vd2.addEventListener("loadedmetadata", function () {
                 vd2.play();
             });
             $("#vbg1").fadeOut(1000);
@@ -233,15 +273,15 @@
             $(".vbgm:first").fadeOut(1000);
             $(".vbgm:last").fadeIn(1000);
         }
-        chooesvideo();
-        setInterval(function(){
-            chooesvideo();
-        },6000);
 
-        if($(window).width()<1000){
+        chooesvideo();
+        setInterval(function () {
+            chooesvideo();
+        }, 6000);
+
+        if ($(window).width() < 1000) {
             $(".vbg").remove();
-        }
-        else{
+        } else {
             $(".vbgm").remove();
         }
 

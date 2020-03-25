@@ -1,12 +1,12 @@
 
 .circle-container {
   position: absolute;
-  -webkit-transform: translateY(-10vh);
-          transform: translateY(-10vh);
+  -webkit-transform: translateY(0vh);
+  transform: translateY(0vh);
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 .circle-container .title {
   position: absolute;
@@ -23,7 +23,7 @@
   mix-blend-mode: screen;
   background-image: radial-gradient(#99ffff, #99ffff 10%, rgba(153, 255, 255, 0) 56%);
   -webkit-animation: fadein-frames 200ms infinite, scale-frames 2s infinite;
-          animation: fadein-frames 200ms infinite, scale-frames 2s infinite;
+  animation: fadein-frames 200ms infinite, scale-frames 2s infinite;
 }
 @-webkit-keyframes fade-frames {
   0% {
@@ -50,29 +50,29 @@
 @-webkit-keyframes scale-frames {
   0% {
     -webkit-transform: scale3d(0.4, 0.4, 1);
-            transform: scale3d(0.4, 0.4, 1);
+    transform: scale3d(0.4, 0.4, 1);
   }
   50% {
     -webkit-transform: scale3d(2.2, 2.2, 1);
-            transform: scale3d(2.2, 2.2, 1);
+    transform: scale3d(2.2, 2.2, 1);
   }
   100% {
     -webkit-transform: scale3d(0.4, 0.4, 1);
-            transform: scale3d(0.4, 0.4, 1);
+    transform: scale3d(0.4, 0.4, 1);
   }
 }
 @keyframes scale-frames {
   0% {
     -webkit-transform: scale3d(0.4, 0.4, 1);
-            transform: scale3d(0.4, 0.4, 1);
+    transform: scale3d(0.4, 0.4, 1);
   }
   50% {
     -webkit-transform: scale3d(2.2, 2.2, 1);
-            transform: scale3d(2.2, 2.2, 1);
+    transform: scale3d(2.2, 2.2, 1);
   }
   100% {
     -webkit-transform: scale3d(0.4, 0.4, 1);
-            transform: scale3d(0.4, 0.4, 1);
+    transform: scale3d(0.4, 0.4, 1);
   }
 }
 .circle-container{
@@ -81,21 +81,52 @@
   width: 15px;
   height: 15px;
   -webkit-animation-duration: 34717ms;
-          animation-duration: 34717ms;
+  animation-duration: 34717ms;
   -webkit-animation-delay: 13306ms;
-          animation-delay: 13306ms;
+  animation-delay: 13306ms;
 }
 
 .beijing{
   left: 412px;
-  top: 191px;
+  top: 149px;
 }
 
 .shanghai{
   left: 482px;
-  top: 277px
+  top: 235px
 }
 .chongqing{
   left: 302px;
-  top: 293px;
+  top: 251px;
+}
+
+.huabei{
+  left: 324px;
+  top: 152px;
+}
+.huazhong{
+  left: 389px;
+  top: 240px;
+}
+.huadong{
+  left: 450px;
+  top: 180px;
+}
+.huanan{
+  left: 349px;
+  top: 300px;
+}
+
+.dongbei{
+  left: 493px;
+  top: 79px;
+}
+
+.xibei{
+  left: 150px;
+  top: 106px;
+}
+.xinan{
+  left: 142px;
+  top: 237px;
 }
