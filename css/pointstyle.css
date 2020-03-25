@@ -80,10 +80,21 @@
   top: 220px;
   width: 15px;
   height: 15px;
+  cursor: pointer;
   -webkit-animation-duration: 34717ms;
   animation-duration: 34717ms;
   -webkit-animation-delay: 13306ms;
   animation-delay: 13306ms;
+}
+
+.circle-container.big{
+  width:17px;
+  height: 17px;
+}
+
+.circle-container.small{
+  width:12px;
+  height: 12px;
 }
 
 .beijing{

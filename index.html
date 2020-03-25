@@ -142,65 +142,70 @@
             <!--            <span class="map-dot shanghai cur" data-id="shanghai" value="上海">上海</span>-->
             <!--            <span class="map-dot chongqing" data-id="chongqing" value="重庆">重庆</span>-->
 
-<!--            <div class="circle-container beijing">-->
-<!--                <div class="title">北京</div>-->
-<!--                <div class="circle">-->
-<!--                </div>-->
-<!--            </div>-->
+            <!--            <div class="circle-container beijing">-->
+            <!--                <div class="title">北京</div>-->
+            <!--                <div class="circle">-->
+            <!--                </div>-->
+            <!--            </div>-->
 
-<!--            <div class="circle-container shanghai">-->
-<!--                <div class="title">上海</div>-->
-<!--                <div class="circle"></div>-->
-<!--            </div>-->
+            <!--            <div class="circle-container shanghai">-->
+            <!--                <div class="title">上海</div>-->
+            <!--                <div class="circle"></div>-->
+            <!--            </div>-->
 
-<!--            <div class="circle-container chongqing">-->
-<!--                <div class="title">重庆</div>-->
-<!--                <div class="circle"></div>-->
-<!--            </div>-->
+            <!--            <div class="circle-container chongqing">-->
+            <!--                <div class="title">重庆</div>-->
+            <!--                <div class="circle"></div>-->
+            <!--            </div>-->
 
             <img src="./images/map.png" class="bg-img" alt="">
 
+        </div>
 
-            <div class="map-module">
-                <div class="map-content-info">
-                    <div class="branch-map-l">
 
-                        <div class="branch-map-data" id="company_liaoning">
-                            <div class="branch-map-data-title">
-                                <p>辽宁</p>
-                            </div>
-                            <div class="branch-map-data-info">
-                                <div class="data-branch">
-                                    <a href="#" target="_blank" title=""><p class="data-name">大连分公司</p></a>
-                                    <p>地址： 大连市合众分公司</p>
-                                    <p>总机：0411-90xxxx88</p>
-                                    <p>传真：0411-09xxxx88</p>
-                                    <p>网址： <a href="#">www.jq22.com</a></p>
-                                </div>
-                                <div class="data-branch">
-                                    <a href="#" target="_blank" title=""><p class="data-name">沈阳分公司</p></a>
-                                    <p>地址： 沈阳市国营大道310号民营路旗舰大厦</p>
-                                    <p>总机：024-78787878</p>
-                                    <p>传真：024-87878787</p>
-                                    <p>网址： <a href="#" target="_blank">www.17sucai.com</a></p>
-                                </div>
-                                <div class="data-branch">
-                                    <a href="#" target="_blank" title="辽宁网站建设">
-                                        <p class="data-name">锦州分公司</p>
-                                    </a>
-                                    <p>地址： 锦州市中央大街二段25号C座问鼎大厦6楼锦州分公司</p>
-                                    <p>总机：0416-3864222</p>
-                                    <p>传真：0416-3882060</p>
-                                    <p>
-                                        网址： <a href="#">www.jq22.com</a></p>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+        <div class="case_detail js_case_detail" style="display: none; left: 0px; top: 0px; right: 0px; bottom: 0px;">
+            <div class="close"></div>
+            <div class="content"></div>
+            <div class="loading" style="display: block;">
+                <div class="spinner">
+                    <div class="spinner-container container1">
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                        <div class="circle3"></div>
+                        <div class="circle4"></div>
+                    </div>
+                    <div class="spinner-container container2">
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                        <div class="circle3"></div>
+                        <div class="circle4"></div>
                     </div>
                 </div>
             </div>
         </div>
+
+
+        <div class="case_detail case_menu js_case_menu" style="display: none; left: 0px; top: 0px; right: 0px; bottom: 0px;">
+            <div class="close"></div>
+            <div class="content"></div>
+            <div class="loading" style="display: block;">
+                <div class="spinner">
+                    <div class="spinner-container container1">
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                        <div class="circle3"></div>
+                        <div class="circle4"></div>
+                    </div>
+                    <div class="spinner-container container2">
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                        <div class="circle3"></div>
+                        <div class="circle4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     </div>
 
@@ -211,37 +216,60 @@
     var sw = 0;
 
     var areaList = [
-        {name: '北京', value: 'beijing'},
-        {name: '上海', value: 'shanghai'},
-        {name: '重庆', value: 'chongqing'},
-        {name: '华北', value: 'huabei'},
-        {name: '华中', value: 'huazhong'},
-        {name: '华东', value: 'huadong'},
-        {name: '华南', value: 'huanan'},
-        {name: '东北', value: 'dongbei'},
-        {name: '西北', value: 'xibei'},
-        {name: '西南', value: 'xinan'},
+        {name: '北京', value: 'beijing', size: 'big', link:'Sulwhasoo.html'},
+        {name: '上海', value: 'shanghai', size: 'big',link:'Sulwhasoo.html'},
+        {name: '重庆', value: 'chongqing', size: 'small',link:'Sulwhasoo.html'},
+        {name: '华北', value: 'huabei', size: 'big',link:'Sulwhasoo.html'},
+        {name: '华中', value: 'huazhong', size: 'big',link:'Sulwhasoo.html'},
+        {name: '华东', value: 'huadong', size: 'big',link:'Sulwhasoo.html'},
+        {name: '华南', value: 'huanan', size: 'big',link:'Sulwhasoo.html'},
+        {name: '东北', value: 'dongbei', size: 'small',link:'Sulwhasoo.html'},
+        {name: '西北', value: 'xibei', size: 'big',link:'Sulwhasoo.html'},
+        {name: '西南', value: 'xinan', size: 'small',link:'Sulwhasoo.html'},
     ]
 
     $(function () {
 
         areaList.forEach(function (item, index) {
             $("#mySelect").append($(`<option value="${item.value}" >${item.name}</option>`))
-            $("#map_content")
-                .append($(`
-                    <div class="circle-container ${item.value}">
+
+            var dot = $(`
+                    <div class="circle-container ${item.value} ${item.size}" data-value="${item.value}">
                         <div class="title">${item.name}</div>
                         <div class="circle">
                         </div>
                     </div>`
-                ))
-
-
+            );
+            var branch = $(`<div class="branch-map-data" id="company_${item.value}" data-link="${item.link}">
+                            <div class="branch-map-data-title">
+                                <p>${item.name}</p>
+                                <p>门店数：7</p>
+                            </div>
+                        </div>`
+                );
+            $("#map_content").append(dot).append(branch)
         })
-
 
         $("#mySelect").richselect();
 
+
+        $(".circle-container").on("click", function () {
+
+            var value = $(this).attr('data-value');
+            console.log(value)
+
+            var comp = $("#company_" + value)
+                , otherComp = $("#company_" + value).siblings(".branch-map-data");
+            comp.fadeIn("fast").css({
+                "left": $(this).position().left + 36,
+                "top": $(this).position().top - comp.height() / 2 + 8
+            });
+            otherComp.hide();
+        });
+
+        $(".branch-map-data").on("mouseleave", function () {
+            $(this).hide();
+        });
 
         if ($(window).width() / $(window).height() > 1920 / 1080) {
             $(".vbg").height($(window).width() / 1920 * 1080);
@@ -425,9 +453,9 @@
         });
 
 
-        $(".case .list .index .item").click(function () {
+        $(".branch-map-data").click(function () {
             var t = $(this).find("a");
-
+            var value = $(this).attr('data-link');
             var _detail = t.attr('type') === 'menu' ? $(".js_case_menu") : $(".js_case_detail");
 
             _detail.css({
@@ -438,7 +466,7 @@
             }).show();
             _detail.transit({left: 0, top: 0, right: 0, bottom: 0}, 600, "cubic-bezier(0,1,0.6,1)", function () {
                 var d = new Date();
-                $(this).find(".content").load(t.attr("link") + "?" + d.getTime(), function () {
+                $(this).find(".content").load(value + "?" + d.getTime(), function () {
                     _detail.find('.loading').fadeOut(300);
                     if ($(window).width() > 1000) {
                         $(this).find(".pic").niceScroll({
