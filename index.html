@@ -207,6 +207,48 @@
         </div>
     </div>
 
+    <div class="list sd" style="display: none;">
+        <div class="close"></div>
+        <div class="inner index" tabindex="5000" style="overflow: auto; outline: none;">
+
+
+
+            <div class="item"><img src="image/s57fde8df30823.jpg">
+                <div class="mask"><span class="b"></span>
+                    <h3><a link="Sulwhasoo.html">
+                        <strong>雪花秀</strong>
+                        <em>Sulwhasoo</em>
+                    </a></h3>
+                </div>
+            </div>
+            <div class="item"><img src="image/s57fddbd5c87e1.jpg">
+                <div class="mask"><span class="b"></span>
+                    <h3><a link="LANEIGE.html">
+                        <strong>兰芝</strong>
+                        <em>LANEIGE</em>
+                    </a></h3>
+                </div>
+            </div>
+
+            <div class="item"><img src="image/s57fddcd762b67.jpg">
+                <div class="mask"><span class="b"></span>
+                    <h3><a link="Mamonde.html">
+                        <strong>梦妆</strong>
+                        <em>Mamonde</em>
+                    </a></h3>
+                </div>
+            </div>
+            <div class="item"><img src="image/s57fdde6b49bc1.jpg">
+                <div class="mask"><span class="b"></span>
+                    <h3><a link="Innisfree.html">
+                        <strong>悦诗风吟</strong>
+                        <em>Innisfree</em>
+                    </a></h3>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
 
@@ -216,8 +258,9 @@
     var sw = 0;
 
     var areaList = [
-        {name: '北京', value: 'beijing', size: 'big', link:'Sulwhasoo.html'},
-        {name: '上海', value: 'shanghai', size: 'big',link:'Sulwhasoo.html'},
+        {name: '全部地区', value: 'all', size: 'none', link:'NewStore.html'},
+        {name: '北京', value: 'beijing', size: 'big', link:'LED.html'},
+        {name: '上海', value: 'shanghai', size: 'big',link:'IOPE.html'},
         {name: '重庆', value: 'chongqing', size: 'small',link:'Sulwhasoo.html'},
         {name: '华北', value: 'huabei', size: 'big',link:'Sulwhasoo.html'},
         {name: '华中', value: 'huazhong', size: 'big',link:'Sulwhasoo.html'},
@@ -230,41 +273,69 @@
 
     $(function () {
 
+        $(".case .list").fadeIn(1000, function () {
+            if ($(".case .list").hasClass("sd")) {
+                if ($(window).width() > 1000) {
+                    $(this).find(".inner").niceScroll({
+                        cursorcolor:"#ccc",
+                        cursorborder:"none",
+                        cursorwidth:"6px",
+                        scrollspeed:80,
+                        background:"#555",
+                        cursoropacitymin:0.2,
+                        cursoropacitymax:1,
+                        enablekeyboard:false,
+                        zindex:0
+                    });
+                }
+                $(".case .list").addClass("sd");
+            }
+        }).addClass("show");
+        $(".case .list .inner").scrollTop(0);
+
         areaList.forEach(function (item, index) {
             $("#mySelect").append($(`<option value="${item.value}" >${item.name}</option>`))
 
-            var dot = $(`
-                    <div class="circle-container ${item.value} ${item.size}" data-value="${item.value}">
-                        <div class="title">${item.name}</div>
-                        <div class="circle">
-                        </div>
+            var $dot = $(`
+                    <div class="circle-container ${item.value} ${item.size}" data-value="${item.value}" data-link="${item.link}">
+<!--                        <div class="title">${item.name}</div>-->
+                        <div class="circle"></div>
+                        <div class="biaoji"><img src="./images/biaoji.png" width="20" height="30" alt=""></div>
                     </div>`
             );
-            var branch = $(`<div class="branch-map-data" id="company_${item.value}" data-link="${item.link}">
+            var branch = $(`<div class="branch-map-data" id="company_${item.value}">
                             <div class="branch-map-data-title">
                                 <p>${item.name}</p>
                                 <p>门店数：7</p>
                             </div>
                         </div>`
                 );
-            $("#map_content").append(dot).append(branch)
+            $("#map_content").append($dot).append(branch)
         })
 
-        $("#mySelect").richselect();
+        $("#mySelect").richselect({});
+        $("#mySelect-rich li").click(function(){
+            var value = $(this).attr('value')
+
+            var link = areaList.find(i=>i.value===value).link;
+            if(value==='all'){
+                ChangeItem('menu' ,  link);
+            }else{
+                ChangeItem('item' ,  link);
+                // showBiaoji(value)
+            }
+        }).easyAudioEffects({
+            mp3: "./audio/chime.mp3",
+            eventType: 'click'
+        });
 
 
-        $(".circle-container").on("click", function () {
+        $(".circle-container").on("mouseover", function () {
 
             var value = $(this).attr('data-value');
-            console.log(value)
 
-            var comp = $("#company_" + value)
-                , otherComp = $("#company_" + value).siblings(".branch-map-data");
-            comp.fadeIn("fast").css({
-                "left": $(this).position().left + 36,
-                "top": $(this).position().top - comp.height() / 2 + 8
-            });
-            otherComp.hide();
+            showBiaoji(value)
+
         });
 
         $(".branch-map-data").on("mouseleave", function () {
@@ -453,10 +524,35 @@
         });
 
 
-        $(".branch-map-data").click(function () {
+        $(".circle-container").click(function () {
             var t = $(this).find("a");
             var value = $(this).attr('data-link');
-            var _detail = t.attr('type') === 'menu' ? $(".js_case_menu") : $(".js_case_detail");
+            var type = t.attr('type')
+            ChangeItem(type , value)
+
+        }).easyAudioEffects({
+            mp3: "./audio/chime.mp3",
+            eventType: 'click'
+        });
+
+        var showBiaoji = function (value){
+            var comp = $("#company_" + value)
+                ,_this = $(`.circle-container.${value}`)
+                , otherComp = $("#company_" + value).siblings(".branch-map-data")
+                ,biaoji = $(".biaoji")
+                ,_thisBiaoji=_this.find(".biaoji");
+            comp.fadeIn("fast").css({
+                "left": _this.position().left + 36,
+                "top": _this.position().top - comp.height() / 2 + 8
+            });
+            otherComp.hide();
+            biaoji.hide();
+            _thisBiaoji.show();
+        }
+
+        var ChangeItem= function(type , value){
+
+            var _detail = type === 'menu' ? $(".js_case_menu") : $(".js_case_detail");
 
             _detail.css({
                 left: cx,
@@ -485,10 +581,7 @@
 
             });
             return false;
-        }).easyAudioEffects({
-            mp3: "./audio/chime.mp3",
-            eventType: 'click'
-        });
+        }
     });
 
 </script>
