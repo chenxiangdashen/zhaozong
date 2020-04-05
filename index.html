@@ -262,16 +262,16 @@
 
     var areaList = [
         {name: '全部地区', value: 'all', size: 'none', link:'newHtml/NewCity.html'},
-        {name: '北京', value: 'beijing', size: 'big', link:'newHtml/beijing.html'},
-        {name: '上海', value: 'shanghai', size: 'big',link:'newHtml/shanghai.html'},
-        {name: '重庆', value: 'chongqing', size: 'small',link:'newHtml/chongqing.html'},
-        {name: '华北', value: 'huabei', size: 'big',link:'newHtml/huabei.html'},
-        {name: '华中', value: 'huazhong', size: 'big',link:'newHtml/huazhong.html'},
-        {name: '华东', value: 'huadong', size: 'big',link:'newHtml/huadong.html'},
-        {name: '华南', value: 'huanan', size: 'big',link:'newHtml/huanan.html'},
-        {name: '东北', value: 'dongbei', size: 'small',link:'newHtml/dongbei.html'},
-        {name: '西北', value: 'xibei', size: 'big',link:'newHtml/xibei.html'},
-        {name: '西南', value: 'xinan', size: 'small',link:'newHtml/xinan.html'},
+        {name: '北京', value: 'beijing', size: 'big', link:'newHtml/beijing.html',length:4},
+        {name: '上海', value: 'shanghai', size: 'big',link:'newHtml/shanghai.html',length:7},
+        {name: '重庆', value: 'chongqing', size: 'small',link:'newHtml/chongqing.html',length:4},
+        {name: '华北', value: 'huabei', size: 'big',link:'newHtml/huabei.html',length:5},
+        {name: '华中', value: 'huazhong', size: 'big',link:'newHtml/huazhong.html',length:9},
+        {name: '华东', value: 'huadong', size: 'big',link:'newHtml/huadong.html',length:13},
+        {name: '华南', value: 'huanan', size: 'big',link:'newHtml/huanan.html',length:11},
+        {name: '东北', value: 'dongbei', size: 'small',link:'newHtml/dongbei.html',length:7},
+        {name: '西北', value: 'xibei', size: 'big',link:'newHtml/xibei.html',length:6},
+        {name: '西南', value: 'xinan', size: 'small',link:'newHtml/xinan.html',length:4},
     ]
 
     $(function () {
@@ -313,7 +313,7 @@
             var branch = $(`<div class="branch-map-data" id="company_${item.value}" data-value="${item.value}" >
                             <div class="branch-map-data-title">
                                 <p>${item.name}</p>
-                                <p>门店数：7</p>
+                                <p>门店数：${item.length}</p>
                             </div>
                         </div>`
                 );
