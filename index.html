@@ -80,7 +80,7 @@
         <div class="t">
             <div class="link">上海海恭光电科技有限公司</div>
             <!--<div class="tel"></div>-->
-            <div class="link">400 920 6205 全国维护电话</div>
+            <div class="link"><span style="font-size: 17px">400 920 6205</span> 全国维护电话</div>
         </div>
 
         <audio id="audioBgm" class="audio" src="./audio/bgm4.mp3" preload="auto" loop="loop"></audio>
@@ -105,10 +105,10 @@
 <script src="./js/vivus.min.js"></script>
 
 <div class="banner">
-    <!--    <div class="frame" style="transform: scale(1.05, 1.05) translate(-6px, -13px);">-->
-    <!--        <div class="child" style="background-image:url(image/banner.jpg);"></div>-->
-    <!--    </div>-->
-    <div class="frame">
+        <div class="frame imgbgm" style="transform: scale(1.05, 1.05) translate(-6px, -13px);">
+            <div class="child" style="background-image:url(image/banner.jpg);"></div>
+        </div>
+    <div class="frame videobgm">
         <video class="vbg" id="vbg1" preload="auto" loop width="100%" height="100%"
                poster1="./image/New/video1.jpg" webkit-playsinline muted>
             <source src="./image/New/bg_d.mp4" type="video/mp4"></source>
@@ -135,6 +135,9 @@
     <a href="#" class="a_r"></a>
     <div class="main"><span class="bdr b1"></span><span class="bdr b2"></span><span class="bdr b3"></span><span
             class="bdr b4"></span>
+        <div class="piaofu">
+            <img src="./image/New/kongqijinhua.png" alt="">
+        </div>
 
         <div id="map_content" class="map-content map-branch">
 
@@ -207,49 +210,49 @@
         </div>
     </div>
 
-    <div class="list sd" style="display: none;">
-        <div class="close"></div>
-        <div class="inner index" tabindex="5000" style="overflow: auto; outline: none;">
+<!--    <div class="list sd" style="display: none;">-->
+<!--        <div class="close"></div>-->
+<!--        <div class="inner index" tabindex="5000" style="overflow: auto; outline: none;">-->
 
 
 
-            <div class="item"><img src="image/s57fde8df30823.jpg">
-                <div class="mask"><span class="b"></span>
-                    <h3><a link="Sulwhasoo.html">
-                        <strong>雪花秀</strong>
-                        <em>Sulwhasoo</em>
-                    </a></h3>
-                </div>
-            </div>
-            <div class="item"><img src="image/s57fddbd5c87e1.jpg">
-                <div class="mask"><span class="b"></span>
-                    <h3><a link="LANEIGE.html">
-                        <strong>兰芝</strong>
-                        <em>LANEIGE</em>
-                    </a></h3>
-                </div>
-            </div>
+<!--            <div class="item"><img src="image/s57fde8df30823.jpg">-->
+<!--                <div class="mask"><span class="b"></span>-->
+<!--                    <h3><a link="Sulwhasoo.html">-->
+<!--                        <strong>雪花秀</strong>-->
+<!--                        <em>Sulwhasoo</em>-->
+<!--                    </a></h3>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="item"><img src="image/s57fddbd5c87e1.jpg">-->
+<!--                <div class="mask"><span class="b"></span>-->
+<!--                    <h3><a link="LANEIGE.html">-->
+<!--                        <strong>兰芝</strong>-->
+<!--                        <em>LANEIGE</em>-->
+<!--                    </a></h3>-->
+<!--                </div>-->
+<!--            </div>-->
 
-            <div class="item"><img src="image/s57fddcd762b67.jpg">
-                <div class="mask"><span class="b"></span>
-                    <h3><a link="Mamonde.html">
-                        <strong>梦妆</strong>
-                        <em>Mamonde</em>
-                    </a></h3>
-                </div>
-            </div>
-            <div class="item"><img src="image/s57fdde6b49bc1.jpg">
-                <div class="mask"><span class="b"></span>
-                    <h3><a link="Innisfree.html">
-                        <strong>悦诗风吟</strong>
-                        <em>Innisfree</em>
-                    </a></h3>
-                </div>
-            </div>
+<!--            <div class="item"><img src="image/s57fddcd762b67.jpg">-->
+<!--                <div class="mask"><span class="b"></span>-->
+<!--                    <h3><a link="Mamonde.html">-->
+<!--                        <strong>梦妆</strong>-->
+<!--                        <em>Mamonde</em>-->
+<!--                    </a></h3>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="item"><img src="image/s57fdde6b49bc1.jpg">-->
+<!--                <div class="mask"><span class="b"></span>-->
+<!--                    <h3><a link="Innisfree.html">-->
+<!--                        <strong>悦诗风吟</strong>-->
+<!--                        <em>Innisfree</em>-->
+<!--                    </a></h3>-->
+<!--                </div>-->
+<!--            </div>-->
 
-        </div>
+<!--        </div>-->
 
-    </div>
+<!--    </div>-->
 
 
 </div>
@@ -258,20 +261,24 @@
     var sw = 0;
 
     var areaList = [
-        {name: '全部地区', value: 'all', size: 'none', link:'NewStore.html'},
-        {name: '北京', value: 'beijing', size: 'big', link:'LED.html'},
-        {name: '上海', value: 'shanghai', size: 'big',link:'IOPE.html'},
-        {name: '重庆', value: 'chongqing', size: 'small',link:'Sulwhasoo.html'},
-        {name: '华北', value: 'huabei', size: 'big',link:'Sulwhasoo.html'},
-        {name: '华中', value: 'huazhong', size: 'big',link:'Sulwhasoo.html'},
-        {name: '华东', value: 'huadong', size: 'big',link:'Sulwhasoo.html'},
-        {name: '华南', value: 'huanan', size: 'big',link:'Sulwhasoo.html'},
-        {name: '东北', value: 'dongbei', size: 'small',link:'Sulwhasoo.html'},
-        {name: '西北', value: 'xibei', size: 'big',link:'Sulwhasoo.html'},
-        {name: '西南', value: 'xinan', size: 'small',link:'Sulwhasoo.html'},
+        {name: '全部地区', value: 'all', size: 'none', link:'newHtml/NewCity.html'},
+        {name: '北京', value: 'beijing', size: 'big', link:'newHtml/beijing.html'},
+        {name: '上海', value: 'shanghai', size: 'big',link:'newHtml/shanghai.html'},
+        {name: '重庆', value: 'chongqing', size: 'small',link:'newHtml/chongqing.html'},
+        {name: '华北', value: 'huabei', size: 'big',link:'newHtml/huabei.html'},
+        {name: '华中', value: 'huazhong', size: 'big',link:'newHtml/huazhong.html'},
+        {name: '华东', value: 'huadong', size: 'big',link:'newHtml/huadong.html'},
+        {name: '华南', value: 'huanan', size: 'big',link:'newHtml/huanan.html'},
+        {name: '东北', value: 'dongbei', size: 'small',link:'newHtml/dongbei.html'},
+        {name: '西北', value: 'xibei', size: 'big',link:'newHtml/xibei.html'},
+        {name: '西南', value: 'xinan', size: 'small',link:'newHtml/xinan.html'},
     ]
 
     $(function () {
+        $('.piaofu').click(function(){
+            ChangeItem('item' ,  'newHtml/kongqijinghua.html');
+
+        })
 
         $(".case .list").fadeIn(1000, function () {
             if ($(".case .list").hasClass("sd")) {
@@ -298,12 +305,12 @@
 
             var $dot = $(`
                     <div class="circle-container ${item.value} ${item.size}" data-value="${item.value}" data-link="${item.link}">
-<!--                        <div class="title">${item.name}</div>-->
+                        <div class="title">${item.name}</div>
                         <div class="circle"></div>
                         <div class="biaoji"><img src="./images/biaoji.png" width="20" height="30" alt=""></div>
                     </div>`
             );
-            var branch = $(`<div class="branch-map-data" id="company_${item.value}">
+            var branch = $(`<div class="branch-map-data" id="company_${item.value}" data-value="${item.value}" >
                             <div class="branch-map-data-title">
                                 <p>${item.name}</p>
                                 <p>门店数：7</p>
@@ -337,6 +344,12 @@
             showBiaoji(value)
 
         });
+        //
+        // $(".circle-container").on("mouseleave", function () {
+        //
+        //     $('.circle-container .title').show();
+        //
+        // });
 
         $(".branch-map-data").on("mouseleave", function () {
             $(this).hide();
@@ -416,7 +429,10 @@
         }
 
         setInterval(toggleSound, 100);
-
+        $(".banner .frame").delay(600).transit({scale: "1.3"}, 2000, "cubic-bezier(0,1,1,1)");
+        $(".banner").find('.imgbgm').hide();
+        $(".banner").find('.videobgm').show();
+        $(".caseshadow").delay(1000).fadeIn(1000);
 
         $(".case .list .close").click(function () {
             if (sw == 1) {
@@ -497,6 +513,11 @@
         }
 
         $(".js_case_menu .close").click(function () {
+
+            $(".banner").find('.imgbgm').hide();
+            $(".banner").find('.videobgm').show();
+            $('.piaofu').show();
+
             $(".js_case_menu").fadeOut(400, function () {
                 $(".js_case_menu").find(".content").html("");
 //            $(".js_case_menu .loading").show();
@@ -507,6 +528,11 @@
         });
 
         $(".js_case_detail .close").click(function () {
+
+            $(".banner").find('.imgbgm').hide();
+            $(".banner").find('.videobgm').show();
+            $('.piaofu').show();
+
             $(".js_case_detail").fadeOut(400, function () {
                 $(".js_case_detail").find(".content").html("");
 //            $(".js_case_detail .loading").show();
@@ -540,6 +566,8 @@
                 ,_this = $(`.circle-container.${value}`)
                 , otherComp = $("#company_" + value).siblings(".branch-map-data")
                 ,biaoji = $(".biaoji")
+                ,title = $(".title")
+                ,_thisTitle = _this.find(".title")
                 ,_thisBiaoji=_this.find(".biaoji");
             comp.fadeIn("fast").css({
                 "left": _this.position().left + 36,
@@ -547,10 +575,16 @@
             });
             otherComp.hide();
             biaoji.hide();
+            title.show();
+            _thisTitle.hide();
             _thisBiaoji.show();
         }
 
         var ChangeItem= function(type , value){
+
+            $(".banner").find('.imgbgm').show();
+            $(".banner").find('.videobgm').hide();
+            $('.piaofu').hide();
 
             var _detail = type === 'menu' ? $(".js_case_menu") : $(".js_case_detail");
 
@@ -562,10 +596,10 @@
             }).show();
             _detail.transit({left: 0, top: 0, right: 0, bottom: 0}, 600, "cubic-bezier(0,1,0.6,1)", function () {
                 var d = new Date();
-                $(this).find(".content").load(value + "?" + d.getTime(), function () {
+                _detail.find(".content").load(value + "?" + d.getTime(), function () {
                     _detail.find('.loading').fadeOut(300);
                     if ($(window).width() > 1000) {
-                        $(this).find(".pic").niceScroll({
+                        _detail.find(".pic").niceScroll({
                             cursorcolor: "#bbb",
                             cursorborder: "none",
                             cursorwidth: "6px",

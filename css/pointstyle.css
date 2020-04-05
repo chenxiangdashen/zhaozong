@@ -49,30 +49,30 @@
 }
 @-webkit-keyframes scale-frames {
   0% {
-    -webkit-transform: scale3d(0.4, 0.4, 1);
-    transform: scale3d(0.4, 0.4, 1);
+    -webkit-transform: scale3d(0.7, 0.7, 1);
+    transform: scale3d(0.7, 0.7, 1);
   }
   50% {
     -webkit-transform: scale3d(2.2, 2.2, 1);
     transform: scale3d(2.2, 2.2, 1);
   }
   100% {
-    -webkit-transform: scale3d(0.4, 0.4, 1);
-    transform: scale3d(0.4, 0.4, 1);
+    -webkit-transform: scale3d(0.7, 0.7, 1);
+    transform: scale3d(0.7, 0.7, 1);
   }
 }
 @keyframes scale-frames {
   0% {
-    -webkit-transform: scale3d(0.4, 0.4, 1);
-    transform: scale3d(0.4, 0.4, 1);
+    -webkit-transform: scale3d(0.7, 0.7, 1);
+    transform: scale3d(0.7, 0.7, 1);
   }
   50% {
     -webkit-transform: scale3d(2.2, 2.2, 1);
     transform: scale3d(2.2, 2.2, 1);
   }
   100% {
-    -webkit-transform: scale3d(0.4, 0.4, 1);
-    transform: scale3d(0.4, 0.4, 1);
+    -webkit-transform: scale3d(0.7, 0.7, 1);
+    transform: scale3d(0.7, 0.7, 1);
   }
 }
 .circle-container{
@@ -88,13 +88,13 @@
 }
 
 .circle-container.big{
-  width:18px;
-  height: 18px;
+  width:10px;
+  height: 10px;
 }
 
 .circle-container.small{
-  width:12px;
-  height: 12px;
+  width:8px;
+  height: 8px;
 }
 
 .circle-container.none{
@@ -108,14 +108,23 @@
 
 
 .circle-container.big .biaoji{
-  top: -25px;
-  left: -1px;
+  top: -28px;
+  left: -4px;
 }
 
 
 .circle-container.small .biaoji{
-  top: -29px;
-  left: -4px;
+  top: -31px;
+  left: -6px;
+}
+
+.piaofu{
+  position: absolute;
+  z-index: 9999;
+  top:20px;
+  left: 50%;
+  margin-left: -83px;
+  cursor: pointer;
 }
 
 .beijing{

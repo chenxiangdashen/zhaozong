@@ -829,6 +829,14 @@ html, body {
     overflow: hidden;
 }
 
+.banner .frame.imgbgm{
+    display: none;
+}
+
+.banner .frame.videobgm{
+    display: block;
+}
+
 .banner .child {
     position: absolute;
     left: 0;
@@ -1456,7 +1464,7 @@ html, body {
     height: 100%;
     font-family: Arial;
     font-size: 12px;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     color: #fff;
     vertical-align: middle;
     text-align: center;
@@ -1644,7 +1652,7 @@ html, body {
 .case_detail .content .des .tip {
     position: absolute;
     left: 0;
-    bottom: 75px;
+    bottom: 10px;
     right: 55px;
     font-size: 12px;
     line-height: 1.5;

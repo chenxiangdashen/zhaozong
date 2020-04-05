@@ -1,0 +1,191 @@
+<!-- saved from url=(0060)http://sj.fractal-technology.com/fxal/116.html?1494384816828 -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+
+<div class="main_1">
+    <span class="bdr b1"></span>
+    <span class="bdr b2"></span>
+    <span class="bdr b3"></span>
+    <span class="bdr b4"></span>
+    <div class="case">
+        <div class="list sd show" style="display:block">
+            <div class="inner newStore" style="overflow: auto;outline: none;">
+
+<!--                {name: '北京', value: 'beijing', size: 'big', link:'newHtml/beijing.html'},-->
+<!--                {name: '上海', value: 'shanghai', size: 'big',link:'newHtml/shanghai.html'},-->
+<!--                {name: '重庆', value: 'chongqing', size: 'small',link:'newHtml/chongqing.html'},-->
+<!--                {name: '华北', value: 'huabei', size: 'big',link:'newHtml/huabei.html'},-->
+<!--                {name: '华中', value: 'huazhong', size: 'big',link:'newHtml/huazhong.html'},-->
+<!--                {name: '华东', value: 'huadong', size: 'big',link:'newHtml/huadong.html'},-->
+<!--                {name: '华南', value: 'huanan', size: 'big',link:'newHtml/huanan.html'},-->
+<!--                {name: '东北', value: 'dongbei', size: 'small',link:'newHtml/dongbei.html'},-->
+<!--                {name: '西北', value: 'xibei', size: 'big',link:'newHtml/xibei.html'},-->
+<!--                {name: '西南', value: 'xinan', size: 'small',link:'newHtml/xinan.html'},-->
+
+                <div class="item"><img src="image/inner/chongqing.jpg">
+                    <div class="mask"><span class="b"></span>
+                        <h3><a link="newHtml/chongqing.html">
+                            <strong>重庆</strong>
+                            <span></span>chongqing</span>
+                        </a></h3>
+                    </div>
+                </div>
+
+                <div class="item"><img src="image/inner/shanghai.jpg">
+                    <div class="mask"><span class="b"></span>
+                        <h3><a link="newHtml/shanghai.html">
+                            <strong>上海</strong>
+                            <span></span>Shanghai</span>
+                        </a></h3>
+                    </div>
+                </div>
+
+                <div class="item"><img src="image/inner/beijing.jpg">
+                    <div class="mask"><span class="b"></span>
+                        <h3><a link="newHtml/beijing.html">
+                            <strong>北京</strong>
+                            <span></span>Beijing</span>
+                        </a></h3>
+                    </div>
+                </div>
+
+
+                <div class="item"><img src="image/inner/huadong.jpg">
+                    <div class="mask"><span class="b"></span>
+                        <h3><a link="newHtml/huabei.html">
+                            <strong>华东</strong>
+                            <span>East China</span>
+                        </a></h3>
+                    </div>
+                </div>
+
+                <div class="item"><img src="image/inner/dongbei.jpg">
+                    <div class="mask"><span class="b"></span>
+                        <h3><a link="newHtml/dongbei.html">
+                            <strong>东北</strong>
+                            <span></span>Northeast</span>
+                        </a></h3>
+                    </div>
+                </div>
+                <div class="item"><img src="image/inner/xibei.jpg">
+                    <div class="mask"><span class="b"></span>
+                        <h3><a link="newHtml/xibei.html">
+                            <strong>西北</strong>
+                            <span></span>Northwest</span>
+                        </a></h3>
+                    </div>
+                </div>
+                <div class="item"><img src="image/inner/huabei.jpg">
+                    <div class="mask"><span class="b"></span>
+                        <h3><a link="newHtml/huabei.html">
+                            <strong>华北</strong>
+                            <span>North China</span>
+                        </a></h3>
+                    </div>
+                </div>
+                <div class="item"><img src="image/inner/huazhong.jpg">
+                    <div class="mask"><span class="b"></span>
+                        <h3><a link="newHtml/huazhong.html">
+                            <strong>华中</strong>
+                            <span>Central China</span>
+                        </a></h3>
+                    </div>
+                </div>
+                <div class="item"><img src="image/inner/huanan.jpg">
+                    <div class="mask"><span class="b"></span>
+                        <h3><a link="newHtml/huanan.html">
+                            <strong>华南</strong>
+                            <span>South China</span>
+                        </a></h3>
+                    </div>
+                </div>
+                <div class="item"><img src="image/inner/xinan.jpg">
+                    <div class="mask"><span class="b"></span>
+                        <h3><a link="newHtml/xinan.html">
+                            <strong>西南</strong>
+                            <span>South China</span>
+                        </a></h3>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+    $(".case .list .newStore .item").click(function () {
+        var t = $(this).find("a");
+
+        $(".js_case_menu").hide();
+        $(".js_case_detail").css({
+            left: cx,
+            top: cy,
+            right: $(".case .list").outerWidth() - cx,
+            bottom: $(".case .list").outerHeight() - cy
+        }).show();
+
+        $(".js_case_detail").transit({left: 0, top: 0, right: 0, bottom: 0}, 600, "cubic-bezier(0,1,0.6,1)", function () {
+            var d = new Date();
+            $(this).find(".content").load(t.attr("link") + "?" + d.getTime(), function () {
+                $(".js_case_detail .loading").fadeOut(300);
+                $(".js_case_detail").find(".content").show();
+                if ($(window).width() > 1000) {
+                    $(this).find(".pic").niceScroll({
+                        cursorcolor: "#bbb",
+                        cursorborder: "none",
+                        cursorwidth: "6px",
+                        scrollspeed: 80,
+                        background: "#333",
+                        cursoropacitymin: 1,
+                        cursoropacitymax: 1,
+                        enablekeyboard: false,
+                        zindex: 1
+                    });
+                }
+            });
+
+        });
+        return false;
+    }).easyAudioEffects({
+        mp3 : "./audio/chime.mp3",
+        eventType : 'click'
+    });
+
+
+
+    $(".js_case_menu .close").click(function () {
+        $(".js_case_menu").fadeOut(400, function () {
+            $(".js_case_menu").find(".content").html("");
+            $(".js_case_menu .loading").show();
+        });
+    });
+
+    $(".js_case_detail .close").click(function () {
+        $(".js_case_menu").show();
+
+        $(".js_case_detail").fadeOut(400, function () {
+            $(".js_case_detail").find(".content").html("");
+            $(".js_case_detail .loading").show();
+        });
+    });
+
+
+    $('.main_1').find(".inner").niceScroll({
+        cursorcolor:"#ccc",
+        cursorborder:"none",
+        cursorwidth:"6px",
+        scrollspeed:80,
+        background:"#555",
+        cursoropacitymin:0.2,
+        cursoropacitymax:1,
+        enablekeyboard:false,
+        zindex:1
+    });
+</script>
+</html>
