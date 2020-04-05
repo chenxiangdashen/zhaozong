@@ -133,11 +133,19 @@
 <div class="body">
     <!--<a href="http://sj.fractal-technology.com/service.html" class="a_l"></a>-->
     <a href="#" class="a_r"></a>
-    <div class="main"><span class="bdr b1"></span><span class="bdr b2"></span><span class="bdr b3"></span><span
-            class="bdr b4"></span>
-        <div class="piaofu">
-            <img src="./image/New/kongqijinhua.png" alt="">
+    <div class="main">
+
+        <div class="piaofu piaofu_x">
+            <div class="piaofuDiv piaofu_y">
+                <img src="./image/New/kongqijinhua.png" alt="">
+            </div>
         </div>
+
+        <span class="bdr b1"></span>
+        <span class="bdr b2"></span>
+        <span class="bdr b3"></span>
+        <span class="bdr b4"></span>
+
 
         <div id="map_content" class="map-content map-branch">
 
@@ -275,9 +283,8 @@
     ]
 
     $(function () {
-        $('.piaofu').click(function(){
+        $('.piaofuDiv').click(function(){
             ChangeItem('item' ,  'newHtml/kongqijinghua.html');
-
         })
 
         $(".case .list").fadeIn(1000, function () {
@@ -340,16 +347,15 @@
         $(".circle-container").on("mouseover", function () {
 
             var value = $(this).attr('data-value');
-
+            $(this).find('.circle').addClass('onMouse')
             showBiaoji(value)
-
         });
         //
-        // $(".circle-container").on("mouseleave", function () {
-        //
-        //     $('.circle-container .title').show();
-        //
-        // });
+        $(".circle-container").on("mouseleave", function () {
+
+            $(this).find('.circle').removeClass('onMouse')
+
+        });
 
         $(".branch-map-data").on("mouseleave", function () {
             $(this).hide();
@@ -584,6 +590,7 @@
 
             $(".banner").find('.imgbgm').show();
             $(".banner").find('.videobgm').hide();
+            $('.branch-map-data').hide();
             $('.piaofu').hide();
 
             var _detail = type === 'menu' ? $(".js_case_menu") : $(".js_case_detail");

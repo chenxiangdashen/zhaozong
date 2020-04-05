@@ -25,6 +25,15 @@
   -webkit-animation: fadein-frames 200ms infinite, scale-frames 2s infinite;
   animation: fadein-frames 200ms infinite, scale-frames 2s infinite;
 }
+
+.circle-container .circle.onMouse{
+
+  /*border:2px solid #ff9c5c;*/
+  /*border-shadow:*/
+  background-image: radial-gradient(#99ffff, #ff9c5c 20%, rgba(255,156,92, 0) 50%);
+  /*box-shadow: 0px 0px 2px #ff9c5c;*/
+}
+
 @-webkit-keyframes fade-frames {
   0% {
     opacity: 1;
@@ -108,8 +117,8 @@
 
 
 .circle-container.big .biaoji{
-  top: -28px;
-  left: -4px;
+  top: -30px;
+  left: -5px;
 }
 
 
@@ -121,10 +130,48 @@
 .piaofu{
   position: absolute;
   z-index: 9999;
-  top:20px;
-  left: 50%;
-  margin-left: -83px;
+  top:0px;
+  left: 0px;
   cursor: pointer;
+}
+
+.piaofu_x {
+  -webkit-animation: piaofu_x 13s linear infinite alternate;
+  animation: piaofu_x 13s linear infinite alternate;
+}
+.piaofu_y {
+  -webkit-animation: piaofu_y 7s linear infinite alternate;
+  animation: piaofu_y 7s linear infinite alternate;
+}
+
+/*.main{*/
+/*  --Width:calc(100vw);*/
+/*}*/
+
+@-webkit-keyframes piaofu_x {
+  100% {
+    -webkit-transform: translateX(calc(100vw - 140px - 166px));
+    transform: translateX(calc(100vw - 140px - 166px));
+  }
+}
+@keyframes piaofu_x {
+  100% {
+    -webkit-transform: translateX(calc(100vw - 140px - 166px));
+    transform: translateX(calc(100vw - 140px - 166px));
+  }
+}
+
+@-webkit-keyframes piaofu_y {
+  100% {
+    -webkit-transform: translateY(calc(100vh - 360px));
+    transform: translateY(calc(100vh - 360px));
+  }
+}
+@keyframes piaofu_y {
+  100% {
+    -webkit-transform: translateY(calc(100vh - 360px));
+    transform: translateY(calc(100vh - 360px));
+  }
 }
 
 .beijing{
