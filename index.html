@@ -327,7 +327,15 @@
             $("#map_content").append($dot).append(branch)
         })
 
-        $("#mySelect").richselect({});
+
+        $("#mySelect").richselect();
+
+        if($(window).width()>1032){
+            $("#mySelect-rich").width(200);
+        }else{
+
+            $("#mySelect-rich").width(100)
+        }
         $("#mySelect-rich li").click(function(){
             var value = $(this).attr('value')
 
@@ -374,6 +382,13 @@
                     $(".vbg").height($(window).width() / 1920 * 1080);
                 } else {
                     $(".vbg").width($(window).height() / 1080 * 1920);
+                }
+
+                if($(window).width()>1032){
+                    $("#mySelect-rich").width(200);
+                }else{
+
+                    $("#mySelect-rich").width(100)
                 }
             }, 100);
         });

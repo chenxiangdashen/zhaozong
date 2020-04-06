@@ -78,6 +78,8 @@ transform:translateX(-50%);-webkit-transform:translateX(-50%);}
 .main .bdr{display:none;}
 .serv{right:55px;top:7px;margin-top:0;z-index:3;}
 .serv .a1{display:none;}
+.serv .a2{display:none;}
+.loaded .header .r{margin-top: 12px}
 .loaded .serv{transform:scale(0.7);-webkit-transform:scale(0.7);}
 
 .header{padding:10px 10px 0;}
