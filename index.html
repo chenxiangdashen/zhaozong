@@ -595,12 +595,19 @@
 
             var _detail = type === 'menu' ? $(".js_case_menu") : $(".js_case_detail");
 
+            if(type!=='menu'){
+                $(".js_case_menu").hide();
+            }
+
             _detail.css({
                 left: cx,
                 top: cy,
                 right: $(".case .list").outerWidth() - cx,
                 bottom: $(".case .list").outerHeight() - cy
             }).show();
+
+
+
             _detail.transit({left: 0, top: 0, right: 0, bottom: 0}, 600, "cubic-bezier(0,1,0.6,1)", function () {
                 var d = new Date();
                 _detail.find(".content").load(value + "?" + d.getTime(), function () {
