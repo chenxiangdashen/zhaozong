@@ -910,6 +910,11 @@ html, body {
     top: 105px;
     right: 70px;
     bottom: 135px;
+    background: rgba(255, 255, 255, 0);
+}
+
+.map-main{
+
     background: rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
@@ -1464,7 +1469,7 @@ html, body {
     height: 100%;
     font-family: Arial;
     font-size: 12px;
-    /*text-transform: uppercase;*/
+    text-transform: uppercase;
     color: #fff;
     vertical-align: middle;
     text-align: center;
