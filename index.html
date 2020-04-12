@@ -835,6 +835,22 @@
     });
 
 
+    $(".body .a_r").click(function () {
+        $('.js_case_detail').hide();
+        $('.js_case_menu').hide();
+        $(".js_case_detail").fadeOut(400, function () {
+            $(".js_case_detail").find(".content").html("");
+        });
+        $(".js_case_menu").fadeOut(400, function () {
+            $(".js_case_menu").find(".content").html("");
+        });
+        backIndexFun();
+    }).easyAudioEffects({
+        mp3 : "./audio/chime.mp3",
+        eventType : 'click'
+    });
+
+
     var x, y;
     var h = $("body").height() / 2;
     var w = $("body").outerWidth() / 2;
