@@ -87,6 +87,7 @@
     .header .menu{transform:scale(0.7);-webkit-transform:scale(0.7);
         transform-origin:right top;-webkit-transform-origin:right top;}
     .header .t{display:none;right:60px;}
+    .header .all_map{margin-right: 0px}
     .header .t .link{font-size:12px;}
     .header .t .tel{font-size:14px;}
     .header .r .gang{width:0px}
