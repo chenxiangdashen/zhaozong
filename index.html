@@ -77,7 +77,7 @@
         <div class="t">
             <div class="link">上海海恭光电科技有限公司</div>
             <!--<div class="tel"></div>-->
-            <div class="link">400 920 6205 全国维护电话</div>
+            <div class="link"><span style="font-size: 17px">400 920 6205</span> 全国维护电话</div>
         </div>
 
         <audio id="audioBgm" class="audio" src="./audio/bgm4.mp3" preload="auto" loop="loop"></audio>
@@ -556,10 +556,11 @@
             var _detail = $(".js_case_detail");
 
             $(".js_case_detail").addClass('js_case_piaofu_detail');
-            // if(type === 'piaofu'){
-            // }else {
-            //     $(".js_case_detail").removeClass('js_case_piaofu_detail');
-            // }
+            if(type === 'piaofu'){
+            }else {
+                $(".js_case_detail").removeClass('js_case_piaofu_detail');
+            }
+
 
             _detail.css({
                 left: cx,
@@ -693,11 +694,13 @@
 
     $(".case").click(function () {
         if (sw == 1) {
+            $('.piaofu').hide();
             run(2);
         }
     });
     $('.case').bind("touchend", function () {
         if (sw == 1) {
+            $('.piaofu').hide();
             run(2);
         }
     });
@@ -708,6 +711,7 @@
              sw=0;
 
              }*/
+
         }
         if (idx == 2) {
             if (!$(".case .list").hasClass("show")) {
@@ -808,6 +812,148 @@
     }
 
     $(".case .list .close").click(function () {
+        backIndexFun();
+    }).easyAudioEffects({
+        mp3 : "./audio/chime.mp3",
+        eventType : 'click'
+    });
+
+
+    $(".header .logo").click(function () {
+        $('.js_case_detail').hide();
+        $('.js_case_menu').hide();
+        $(".js_case_detail").fadeOut(400, function () {
+            $(".js_case_detail").find(".content").html("");
+        });
+        $(".js_case_menu").fadeOut(400, function () {
+            $(".js_case_menu").find(".content").html("");
+        });
+        backIndexFun();
+    }).easyAudioEffects({
+        mp3 : "./audio/chime.mp3",
+        eventType : 'click'
+    });
+
+
+    var x, y;
+    var h = $("body").height() / 2;
+    var w = $("body").outerWidth() / 2;
+    $(window).resize(function () {
+        h = $("body").height() / 2;
+        w = $("body").outerWidth() / 2;
+    });
+    $("body").mousemove(function (event) {
+        x = event.clientX;
+        y = event.clientY;
+        if (sw == 1) {
+            $(".case .title").css({translate: Math.floor((x - w) * 0.04) + "," + Math.floor((y - h) * 0.06)});
+            $(".banner .frame").css({translate: Math.floor((x - w) * 0.02) * -1 + "," + Math.floor((y - h) * 0.05) * -1});
+        }
+    });
+    if (window.DeviceMotionEvent) {
+        var x1, y1;
+        window.addEventListener('devicemotion', function () {
+            var acceleration = event.accelerationIncludingGravity;
+            x1 = acceleration.x;
+            y1 = acceleration.y;
+            if (sw == 1) {
+                //$(".st").html((x1)+"<br/>"+(y1));
+                $(".case .title").css({translate: Math.floor(x1 * 1) + "," + Math.floor(y1 * 1)});
+                $(".banner .frame").css({translate: Math.floor(x1 * 3) + "," + Math.floor(y1 * 3)});
+            }
+        }, false);
+    }
+
+    $(".js_case_menu .close").click(function (e) {
+        // if($('.js_case_detail').hasClass('js_case_piaofu_detail')){
+        //     $('.js_case_detail').removeClass('js_case_piaofu_detail')
+        // }
+        e.stopPropagation();
+        // $('.piaofu').show();
+        e.preventDefault();
+        // $(".js_case_detail").removeClass('js_case_piaofu_detail');
+        $(".js_case_menu").fadeOut(400, function () {
+            $(".js_case_menu").find(".content").html("");
+//            $(".js_case_menu .loading").show();
+        });
+    }).easyAudioEffects({
+        mp3 : "./audio/chime.mp3",
+        eventType : 'click'
+    });
+
+    $(".js_case_detail .close").click(function (e) {
+        if($('.js_case_detail').hasClass('js_case_piaofu_detail')){
+            $('.piaofu').show();
+            $('.js_case_detail').removeClass('js_case_piaofu_detail')
+        }
+        // $(".js_case_detail").removeClass('js_case_piaofu_detail');
+        e.stopPropagation();
+        e.preventDefault();
+        $(".js_case_detail").fadeOut(400, function () {
+            $(".js_case_detail").find(".content").html("");
+//            $(".js_case_detail .loading").show();
+        });
+    }).easyAudioEffects({
+        mp3 : "./audio/chime.mp3",
+        eventType : 'click'
+    });
+
+    var cx = 0;
+    cy = 0;
+    $(".case .list").mousemove(function (event) {
+        cx = event.clientX - $(this).offset().left;
+        cy = event.clientY - $(this).offset().top;
+    });
+
+
+    $(".case .list .index .item").click(function () {
+        var t = $(this).find("a");
+        var type = t.attr('type');
+
+        var _detail = type==='menu' ? $(".js_case_menu") : $(".js_case_detail");
+
+        if(type!=='menu'){
+            $(".js_case_menu").hide();
+            $('.js_case_menu').removeClass('js_case_sub_menu')
+            }else{
+            $('.js_case_menu').addClass('js_case_sub_menu')
+        }
+
+        _detail.css({
+            left: cx,
+            top: cy,
+            right: $(".case .list").outerWidth() - cx,
+            bottom: $(".case .list").outerHeight() - cy
+        }).show();
+        _detail.transit({left: 0, top: 0, right: 0, bottom: 0}, 600, "cubic-bezier(0,1,0.6,1)", function () {
+            var d = new Date();
+            $(this).find(".content").load(t.attr("link") + "?" + d.getTime(), function () {
+                _detail.find('.loading').fadeOut(300);
+                if ($(window).width() > 1000) {
+                    $(this).find(".pic").niceScroll({
+                        cursorcolor: "#bbb",
+                        cursorborder: "none",
+                        cursorwidth: "6px",
+                        scrollspeed: 80,
+                        background: "#333",
+                        cursoropacitymin: 1,
+                        cursoropacitymax: 1,
+                        enablekeyboard: false,
+                        zindex: 1
+                    });
+                }
+            });
+
+        });
+        return false;
+    }).easyAudioEffects({
+        mp3 : "./audio/chime.mp3",
+        eventType : 'click'
+    });
+
+
+    var backIndexFun = function () {
+        $('.piaofu').show();
         if (sw == 1) {
             sw = 0;
             $(".caseshadow").fadeOut(500);
@@ -850,117 +996,8 @@
                 }, 4000);
             });
         }
-    }).easyAudioEffects({
-        mp3 : "./audio/chime.mp3",
-        eventType : 'click'
-    });
-
-
-    var x, y;
-    var h = $("body").height() / 2;
-    var w = $("body").outerWidth() / 2;
-    $(window).resize(function () {
-        h = $("body").height() / 2;
-        w = $("body").outerWidth() / 2;
-    });
-    $("body").mousemove(function (event) {
-        x = event.clientX;
-        y = event.clientY;
-        if (sw == 1) {
-            $(".case .title").css({translate: Math.floor((x - w) * 0.04) + "," + Math.floor((y - h) * 0.06)});
-            $(".banner .frame").css({translate: Math.floor((x - w) * 0.02) * -1 + "," + Math.floor((y - h) * 0.05) * -1});
-        }
-    });
-    if (window.DeviceMotionEvent) {
-        var x1, y1;
-        window.addEventListener('devicemotion', function () {
-            var acceleration = event.accelerationIncludingGravity;
-            x1 = acceleration.x;
-            y1 = acceleration.y;
-            if (sw == 1) {
-                //$(".st").html((x1)+"<br/>"+(y1));
-                $(".case .title").css({translate: Math.floor(x1 * 1) + "," + Math.floor(y1 * 1)});
-                $(".banner .frame").css({translate: Math.floor(x1 * 3) + "," + Math.floor(y1 * 3)});
-            }
-        }, false);
     }
 
-    $(".js_case_menu .close").click(function () {
-        if($('.js_case_detail').hasClass('js_case_piaofu_detail')){
-            $('.piaofu').show();
-            $('.js_case_detail').removeClass('js_case_piaofu_detail')
-        }
-        // $(".js_case_detail").removeClass('js_case_piaofu_detail');
-        $(".js_case_menu").fadeOut(400, function () {
-            $(".js_case_menu").find(".content").html("");
-//            $(".js_case_menu .loading").show();
-        });
-    }).easyAudioEffects({
-        mp3 : "./audio/chime.mp3",
-        eventType : 'click'
-    });
-
-    $(".js_case_detail .close").click(function (e) {
-        if($('.js_case_detail').hasClass('js_case_piaofu_detail')){
-            $('.piaofu').show();
-            $('.js_case_detail').removeClass('js_case_piaofu_detail')
-        }
-        // $(".js_case_detail").removeClass('js_case_piaofu_detail');
-        e.stopPropagation();
-        e.preventDefault();
-        $(".js_case_detail").fadeOut(400, function () {
-            $(".js_case_detail").find(".content").html("");
-//            $(".js_case_detail .loading").show();
-        });
-    }).easyAudioEffects({
-        mp3 : "./audio/chime.mp3",
-        eventType : 'click'
-    });
-
-    var cx = 0;
-    cy = 0;
-    $(".case .list").mousemove(function (event) {
-        cx = event.clientX - $(this).offset().left;
-        cy = event.clientY - $(this).offset().top;
-    });
-
-
-    $(".case .list .index .item").click(function () {
-        var t = $(this).find("a");
-
-        var _detail = t.attr('type')==='menu' ? $(".js_case_menu") : $(".js_case_detail");
-
-        _detail.css({
-            left: cx,
-            top: cy,
-            right: $(".case .list").outerWidth() - cx,
-            bottom: $(".case .list").outerHeight() - cy
-        }).show();
-        _detail.transit({left: 0, top: 0, right: 0, bottom: 0}, 600, "cubic-bezier(0,1,0.6,1)", function () {
-            var d = new Date();
-            $(this).find(".content").load(t.attr("link") + "?" + d.getTime(), function () {
-                _detail.find('.loading').fadeOut(300);
-                if ($(window).width() > 1000) {
-                    $(this).find(".pic").niceScroll({
-                        cursorcolor: "#bbb",
-                        cursorborder: "none",
-                        cursorwidth: "6px",
-                        scrollspeed: 80,
-                        background: "#333",
-                        cursoropacitymin: 1,
-                        cursoropacitymax: 1,
-                        enablekeyboard: false,
-                        zindex: 1
-                    });
-                }
-            });
-
-        });
-        return false;
-    }).easyAudioEffects({
-        mp3 : "./audio/chime.mp3",
-        eventType : 'click'
-    });
 </script>
 <div class="footer">
     <div class="left">

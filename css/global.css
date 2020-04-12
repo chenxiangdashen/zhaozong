@@ -166,6 +166,7 @@ html, body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-right: 10px;
 }
 
 .all_map a{
