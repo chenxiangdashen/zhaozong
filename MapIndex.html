@@ -135,11 +135,11 @@
     <a href="#" class="a_r"></a>
     <div class="main map-main">
 
-        <div class="piaofu piaofu_x">
-            <div class="piaofuDiv piaofu_y">
-                <img src="./image/New/kongqijinhua.png" alt="">
-            </div>
-        </div>
+<!--        <div class="piaofu piaofu_x">-->
+<!--            <div class="piaofuDiv piaofu_y">-->
+<!--                <img src="./image/New/kongqijinhua.png" alt="">-->
+<!--            </div>-->
+<!--        </div>-->
 
         <span class="bdr b1"></span>
         <span class="bdr b2"></span>
@@ -339,6 +339,7 @@
         $("#mySelect-rich li").click(function(){
             var value = $(this).attr('value')
 
+            $('#mySelect-rich').removeClass('is-open');
             var link = areaList.find(i=>i.value===value).link;
             if(value==='all'){
                 ChangeItem('menu' ,  link);
@@ -533,11 +534,12 @@
             }, false);
         }
 
+
         $(".js_case_menu .close").click(function () {
 
             $(".banner").find('.imgbgm').hide();
             $(".banner").find('.videobgm').show();
-            $('.piaofu').show();
+            // $('.piaofu').show();
 
             $(".js_case_menu").fadeOut(400, function () {
                 $(".js_case_menu").find(".content").html("");
@@ -612,6 +614,9 @@
 
             if(type!=='menu'){
                 $(".js_case_menu").hide();
+                $('.js_case_menu').removeClass('js_case_sub_menu')
+            }else{
+                $('.js_case_menu').addClass('js_case_sub_menu')
             }
 
             _detail.css({

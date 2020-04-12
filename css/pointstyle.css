@@ -150,27 +150,27 @@
 
 @-webkit-keyframes piaofu_x {
   100% {
-    -webkit-transform: translateX(calc(100vw - 140px - 166px));
-    transform: translateX(calc(100vw - 140px - 166px));
+    -webkit-transform: translateX(calc(100vw - 140px - 272px));
+    transform: translateX(calc(100vw - 140px - 272px));
   }
 }
 @keyframes piaofu_x {
   100% {
-    -webkit-transform: translateX(calc(100vw - 140px - 166px));
-    transform: translateX(calc(100vw - 140px - 166px));
+    -webkit-transform: translateX(calc(100vw - 140px - 272px));
+    transform: translateX(calc(100vw - 140px - 272px));
   }
 }
 
 @-webkit-keyframes piaofu_y {
   100% {
-    -webkit-transform: translateY(calc(100vh - 360px));
-    transform: translateY(calc(100vh - 360px));
+    -webkit-transform: translateY(calc(100vh - 436px));
+    transform: translateY(calc(100vh - 436px));
   }
 }
 @keyframes piaofu_y {
   100% {
-    -webkit-transform: translateY(calc(100vh - 360px));
-    transform: translateY(calc(100vh - 360px));
+    -webkit-transform: translateY(calc(100vh - 436px));
+    transform: translateY(calc(100vh - 436px));
   }
 }
 

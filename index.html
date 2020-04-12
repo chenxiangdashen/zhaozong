@@ -17,6 +17,11 @@
     <link href="./css/global.css" rel="stylesheet" type="text/css">
     <link href="./css/fix.css" rel="stylesheet" type="text/css">
 
+
+
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/pointstyle.css" rel="stylesheet" type="text/css"/>
+
     <!--[if IE]>
     <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
     <![endif]-->
@@ -63,7 +68,11 @@
     <a href="#" class="logo"></a>
     <div class="r">
 
-        <a href="./MapIndex.html">全国分布地图</a>
+        <div class="all_map">
+            <div class="gang"></div>
+            <a href="./MapIndex.html">全国分布地图</a>
+            <div class="gang"></div>
+        </div>
 
         <div class="t">
             <div class="link">上海海恭光电科技有限公司</div>
@@ -103,6 +112,15 @@
     <a href="#" class="a_r"></a>
     <div class="main"><span class="bdr b1"></span><span class="bdr b2"></span><span class="bdr b3"></span><span
             class="bdr b4"></span>
+
+
+
+        <div class="piaofu piaofu_x">
+            <div class="piaofuDiv piaofu_y">
+                <img src="./image/New/kongqijinhua.png" alt="">
+            </div>
+        </div>
+
         <div class="case">
             <div class="svg" style="width: 1313.48px;">
                 <div class="polygon" style="display: block;">
@@ -527,6 +545,54 @@
 
 
     $(function () {
+
+        $('.piaofuDiv').click(function(){
+            ChangeItem('piaofu' ,  'newHtml/kongqijinghua.html');
+        })
+        var ChangeItem= function(type , value){
+
+            $('.piaofu').hide();
+
+            var _detail = $(".js_case_detail");
+
+            $(".js_case_detail").addClass('js_case_piaofu_detail');
+            // if(type === 'piaofu'){
+            // }else {
+            //     $(".js_case_detail").removeClass('js_case_piaofu_detail');
+            // }
+
+            _detail.css({
+                left: cx,
+                top: cy,
+                right: $(".case .list").outerWidth() - cx,
+                bottom: $(".case .list").outerHeight() - cy
+            }).show();
+
+
+
+            _detail.transit({left: 0, top: 0, right: 0, bottom: 0}, 600, "cubic-bezier(0,1,0.6,1)", function () {
+                var d = new Date();
+                _detail.find(".content").load(value + "?" + d.getTime(), function () {
+                    _detail.find('.loading').fadeOut(300);
+                    if ($(window).width() > 1000) {
+                        _detail.find(".pic").niceScroll({
+                            cursorcolor: "#bbb",
+                            cursorborder: "none",
+                            cursorwidth: "6px",
+                            scrollspeed: 80,
+                            background: "#333",
+                            cursoropacitymin: 1,
+                            cursoropacitymax: 1,
+                            enablekeyboard: false,
+                            zindex: 1
+                        });
+                    }
+                });
+
+            });
+            return false;
+        }
+
         winload();
 
         $('.music-name').webTicker({speed:20,direction: 'right'})
@@ -608,10 +674,6 @@
                 clearInterval(stv1);
             }
         }, 8000);
-    });
-
-    $(window).load(function () {
-
     });
 
 
@@ -824,6 +886,11 @@
     }
 
     $(".js_case_menu .close").click(function () {
+        if($('.js_case_detail').hasClass('js_case_piaofu_detail')){
+            $('.piaofu').show();
+            $('.js_case_detail').removeClass('js_case_piaofu_detail')
+        }
+        // $(".js_case_detail").removeClass('js_case_piaofu_detail');
         $(".js_case_menu").fadeOut(400, function () {
             $(".js_case_menu").find(".content").html("");
 //            $(".js_case_menu .loading").show();
@@ -833,7 +900,14 @@
         eventType : 'click'
     });
 
-    $(".js_case_detail .close").click(function () {
+    $(".js_case_detail .close").click(function (e) {
+        if($('.js_case_detail').hasClass('js_case_piaofu_detail')){
+            $('.piaofu').show();
+            $('.js_case_detail').removeClass('js_case_piaofu_detail')
+        }
+        // $(".js_case_detail").removeClass('js_case_piaofu_detail');
+        e.stopPropagation();
+        e.preventDefault();
         $(".js_case_detail").fadeOut(400, function () {
             $(".js_case_detail").find(".content").html("");
 //            $(".js_case_detail .loading").show();

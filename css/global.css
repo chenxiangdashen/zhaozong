@@ -161,6 +161,25 @@ html, body {
     height: 47px;
 }
 
+.all_map{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.all_map a{
+    color:#fff;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.gang{
+    background-color: #fff;
+    width:30px;
+    height:2px;
+}
+
 .header .logo {
     float: left;
     background: url(../image/logo.png) center center no-repeat;
