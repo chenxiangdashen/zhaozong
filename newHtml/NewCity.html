@@ -140,6 +140,7 @@
 
             var _detail =  $(".js_case_detail")
 
+            $('.piaofu').hide();
             var cx = 0;
 
             $(".case .list").mousemove(function (event) {
@@ -186,6 +187,7 @@
 
         $(".js_case_menu .close").click(function () {
             $('.js_case_detail').hide();
+            $('.piaofu').show();
             $(".js_case_menu").fadeOut(400, function () {
                 $(".js_case_menu").find(".content").html("");
                 $(".js_case_menu .loading").show();
@@ -193,6 +195,9 @@
         });
 
         $(".js_case_detail .close").click(function () {
+            if($('.js_case_detail').hasClass('js_case_sub_menu')){
+                $('.piaofu').hide();
+            }
             $(".js_case_sub_menu").show();
 
             $(".js_case_detail").fadeOut(400, function () {

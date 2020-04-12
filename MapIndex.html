@@ -615,8 +615,10 @@
             if(type!=='menu'){
                 $(".js_case_menu").hide();
                 $('.js_case_menu').removeClass('js_case_sub_menu')
+                $('.js_case_detail').removeClass('js_case_sub_menu')
             }else{
                 $('.js_case_menu').addClass('js_case_sub_menu')
+                $('.js_case_detail').addClass('js_case_sub_menu')
             }
 
             _detail.css({
