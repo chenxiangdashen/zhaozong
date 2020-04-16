@@ -910,10 +910,19 @@ html, body {
     top: 105px;
     right: 70px;
     bottom: 135px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.main_map_text{
+    width:100%;
+}
+.main_map_text .text_left{
+    margin-left: 60px;
+    /*width:300px;*/
+    color:#fff;
 }
 
 .main .bdr {
