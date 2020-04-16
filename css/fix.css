@@ -76,6 +76,7 @@
     .a_l{display:none;}
     .a_r{display:none;}
     .main .bdr{display:none;}
+    .main .main_map_text{display:none;}
     .serv{right:55px;top:7px;margin-top:0;z-index:3;}
     .serv .a1{display:none;}
     .serv .a2{display:none;}
