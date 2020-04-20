@@ -132,86 +132,97 @@
 </body>
 
 <script>
-    $(".case .list .newStore .item").click(function () {
-        var t = $(this).find("a");
 
-        var value = t.attr('link')
-        // $(".js_case_menu").hide();
-        // debugger
+    $(function () {
+        $(".case .list .newStore .item").click(function () {
+            var t = $(this).find("a");
 
-        var _detail =  $(".js_case_menu")
+            var value = t.attr('link')
+            $(".js_case_menu").hide();
+            // debugger
 
-        var cx = 0;
+            var _detail =  $(".js_case_detail")
 
-        $(".case .list").mousemove(function (event) {
-            cx = event.clientX - $(this).offset().left;
-            cy = event.clientY - $(this).offset().top;
-        });
+            $('.piaofu').hide();
+            var cx = 0;
 
-        $(".js_case_detail").css({
-            left: cx,
-            top: cy,
-            right: $(".case .list").outerWidth() - cx,
-            bottom: $(".case .list").outerHeight() - cy
-        }).show();
-
-        console.log(value)
-        _detail.transit({left: 0, top: 0, right: 0, bottom: 0}, 600, "cubic-bezier(0,1,0.6,1)", function () {
-            var d = new Date();
-            _detail.find(".content").load(value + "?" + d.getTime(), function () {
-                _detail.find('.loading').fadeOut(300);
-                // $(".js_case_detail").find(".content").show();
-                if ($(window).width() > 1000) {
-                    $(this).find(".pic").niceScroll({
-                        cursorcolor: "#bbb",
-                        cursorborder: "none",
-                        cursorwidth: "6px",
-                        scrollspeed: 80,
-                        background: "#333",
-                        cursoropacitymin: 1,
-                        cursoropacitymax: 1,
-                        enablekeyboard: false,
-                        zindex: 1
-                    });
-                }
+            $(".case .list").mousemove(function (event) {
+                cx = event.clientX - $(this).offset().left;
+                cy = event.clientY - $(this).offset().top;
             });
 
+            $(".js_case_detail").css({
+                left: cx,
+                top: cy,
+                right: $(".case .list").outerWidth() - cx,
+                bottom: $(".case .list").outerHeight() - cy
+            }).show();
+
+            console.log(value)
+            _detail.transit({left: 0, top: 0, right: 0, bottom: 0}, 600, "cubic-bezier(0,1,0.6,1)", function () {
+                var d = new Date();
+                _detail.find(".content").load(value + "?" + d.getTime(), function () {
+                    _detail.find('.loading').fadeOut(300);
+                    $(".js_case_detail").find(".content").show();
+                    if ($(window).width() > 1000) {
+                        $(this).find(".pic").niceScroll({
+                            cursorcolor: "#bbb",
+                            cursorborder: "none",
+                            cursorwidth: "6px",
+                            scrollspeed: 80,
+                            background: "#333",
+                            cursoropacitymin: 1,
+                            cursoropacitymax: 1,
+                            enablekeyboard: false,
+                            zindex: 1
+                        });
+                    }
+                });
+
+            });
+            return false;
+        }).easyAudioEffects({
+            mp3 : "./audio/chime.mp3",
+            eventType : 'click'
         });
-        return false;
-    }).easyAudioEffects({
-        mp3 : "./audio/chime.mp3",
-        eventType : 'click'
-    });
 
 
 
-    $(".js_case_menu .close").click(function () {
-        $(".js_case_menu").fadeOut(400, function () {
-            $(".js_case_menu").find(".content").html("");
-            // $(".js_case_menu .loading").show();
+        $(".js_case_menu .close").click(function () {
+            $('.js_case_detail').hide();
+            $('.piaofu').show();
+            $(".js_case_menu").fadeOut(400, function () {
+                $(".js_case_menu").find(".content").html("");
+                $(".js_case_menu .loading").show();
+            });
         });
-    });
 
-    $(".js_case_detail .close").click(function () {
-        // $(".js_case_menu").show();
+        $(".js_case_detail .close").click(function () {
+            if($('.js_case_detail').hasClass('js_case_sub_menu')){
+                $('.piaofu').hide();
+            }
+            $(".js_case_sub_menu").show();
 
-        $(".js_case_detail").fadeOut(400, function () {
-            $(".js_case_detail").find(".content").html("");
-            // $(".js_case_detail .loading").show();
+            $(".js_case_detail").fadeOut(400, function () {
+                $(".js_case_detail").find(".content").html("");
+                $(".js_case_detail .loading").show();
+            });
         });
-    });
 
 
-    $('.main_1').find(".inner").niceScroll({
-        cursorcolor:"#ccc",
-        cursorborder:"none",
-        cursorwidth:"6px",
-        scrollspeed:80,
-        background:"#555",
-        cursoropacitymin:0.2,
-        cursoropacitymax:1,
-        enablekeyboard:false,
-        zindex:1
-    });
+
+        $('.main_1').find(".inner").niceScroll({
+            cursorcolor:"#ccc",
+            cursorborder:"none",
+            cursorwidth:"6px",
+            scrollspeed:80,
+            background:"#555",
+            cursoropacitymin:0.2,
+            cursoropacitymax:1,
+            enablekeyboard:false,
+            zindex:1
+        });
+    })
+
 </script>
 </html>
