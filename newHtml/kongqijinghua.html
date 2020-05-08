@@ -4,14 +4,17 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <style>
-
         .case_detail .content .pic{
             padding-right: 30%;
         }
         .case_detail .content .des{
-            padding-left: 70%;
-            width: 90%;
-            left: 0;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            left: 70%;
+            z-index: 990;
+            width:26%;
+            margin:  0px 2%;
         }
         @media screen and (max-width: 1023px) {
             .case_detail .content .des {
@@ -21,6 +24,14 @@
                 left: 0;
                 padding-top: 0;
             }
+        }
+
+        .container .txt{
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            z-index: 990;
+            width:100%;
         }
 
         #video {
@@ -34,100 +45,60 @@
             object-fit: fill;
         }
 
-        .VideoBtn {
-            position: absolute;
-            left: 0;
-            top: 0;
-            display: block;
-            width: 100%;
-            height: 100%;
-            /*margin-left: -35px;*/
-            /*margin-top: -35px;*/
-            cursor: pointer;
-            z-index: 10;
-        }
-
     </style>
 </head>
-<body>
-<div class="des">
-    <h1>苍穹空气消毒解决方案</h1>
-    <h3>Scqair</h3>
-    <div class="txt">
-        <p style="margin-top: 20px; font-size: 12px; margin-bottom: 20px">
-            上海苍穹环保技术有限公司（scqair）成立于2003年，始终
-            专注空气净化消毒领域，致力于为客户提供智慧（smart）、便利
-            （convenient）、品质卓越（quality）的空气净化消毒解决方案、
-            产品及配套工程服务，打造健康、舒适的室内环境，已应用于医院、
-            办公大楼、酒店、学校、家庭、高铁站、地铁站、厂房等诸多领域。
-            公司获得了上海市高新技术成果转化项目（A级）证书、上
-            海市火炬计划项目证书、科技部创新基金、解放军总参科技成果二
-            等奖、第八届国际发明展“发明创业奖•项目奖”金奖、上海市消
-            毒产品生产企业卫生许可证、在建筑行业内重点推广的优秀高新技
-            术产品认定、上海市节能产品认定等。
+    <body>
+    <div class="des">
+        <h1>苍穹空气消毒解决方案</h1>
+        <h3>Scqair</h3>
+        <div class="txt">
+            <p style="margin-top: 20px; font-size: 12px; margin-bottom: 20px">
+                上海苍穹环保技术有限公司（scqair）成立于2003年，始终
+                <!--            专注空气净化消毒领域，致力于为客户提供智慧（smart）、便利-->
+                <!--            （convenient）、品质卓越（quality）的空气净化消毒解决方案、-->
+                <!--            产品及配套工程服务，打造健康、舒适的室内环境，已应用于医院、-->
+                <!--            办公大楼、酒店、学校、家庭、高铁站、地铁站、厂房等诸多领域。-->
+                <!--            公司获得了上海市高新技术成果转化项目（A级）证书、上-->
+                <!--            海市火炬计划项目证书、科技部创新基金、解放军总参科技成果二-->
+                <!--            等奖、第八届国际发明展“发明创业奖•项目奖”金奖、上海市消-->
+                <!--            毒产品生产企业卫生许可证、在建筑行业内重点推广的优秀高新技-->
+                <!--            术产品认定、上海市节能产品认定等。-->
 
-        </p>
+            </p>
 
 
-        <div id="video">
-            <video id="videoShow" width="100%" height="100%" controls name="media">
+            <video width="100%" height="100%" controls name="media">
                 <source src="http://116.62.13.11:8080/cangqiong.m4v" type="video/x-m4v" />
                 您的浏览器不支持Video标签。
             </video>
-            <span class="VideoBtn"></span>
-        </div>
 
-    </div>
-    <!--<div class="attr">-->
+        </div>
+        <!--<div class="attr">-->
         <!--&lt;!&ndash; <p>品牌属性：网站群、移动端、在线社区、数字营销、金融、游戏营销</p> &ndash;&gt;-->
         <!--<p>项目属性：移动端&nbsp;&nbsp;&nbsp;博物馆&nbsp;&nbsp;&nbsp;艺术&nbsp;&nbsp;&nbsp;官网</p>-->
-    <!--</div>-->
-    <div class="labels" style="display:none;"><a class="a1 act"></a><a class="a2"></a><a class="a3">App</a></div>
-    <div class="mpic">
+        <!--</div>-->
+        <div class="labels" style="display:none;"><a class="a1 act"></a><a class="a2"></a><a class="a3">App</a></div>
+        <div class="mpic">
+            <p><img src="image/dis/kongqijinghua.png"></p>
+            <p>&nbsp;</p>
+            <!--<p><img src="image/s58009f5f99799.jpg"></p>-->
+            <!--<p>&nbsp;</p>-->
+            <!--<p><img src="image/s5800a005c0090.jpg"></p>-->
+        </div>
+        <div class="tip">
+            <p>如果您需要定制<br>请联系我们：+862164666950-88&nbsp;&nbsp;&nbsp;400 920 6205</p>
+        </div>
+    </div>
+    <div class="pic">
         <p><img src="image/dis/kongqijinghua.png"></p>
-        <p>&nbsp;</p>
-        <!--<p><img src="image/s58009f5f99799.jpg"></p>-->
-        <!--<p>&nbsp;</p>-->
-        <!--<p><img src="image/s5800a005c0090.jpg"></p>-->
     </div>
-    <div class="tip">
-        <p>如果您需要定制<br>请联系我们：+862164666950-88&nbsp;&nbsp;&nbsp;400 920 6205</p>
-    </div>
-</div>
-<div class="pic">
-    <p><img src="image/dis/kongqijinghua.png"></p>
-</div>
+
 </body>
 
 
 <script>
     $(function () {
 
-        //播放视频
-        $("#video").click(function () {
-            console.log('aa')
-            var video = document.getElementById("videoShow");
-            if (video.paused) {
-                $(".VideoBtn").hide();
-                video.play();
-            } else {
-                $(".VideoBtn").show();
-                video.pause();
-            }
-
-        }).hover(function () {
-            $(".VideoBtn").show();
-        })
-
-
-        // //监听视频的播放状态
-        // var video = document.getElementById("videoShow");
-        //
-        //
-        // //视频暂停事件
-        // video.onpause = function () {
-        //     $(".VideoBtn").show();
-        // };
     })
 </script>
 
